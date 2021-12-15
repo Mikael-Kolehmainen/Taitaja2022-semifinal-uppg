@@ -1,0 +1,75 @@
+@font-face {
+    font-family: barlow;
+    src: url(font/Barlow-Regular.ttf);
+}
+body {
+    font-family: barlow;
+    color: #054065;
+    background: #FFF9F5;
+    letter-spacing: 1px;
+    margin: 0;
+}
+header {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #086BA8;
+    color: white;
+}
+nav {
+    width: 100%;
+    text-align: center;
+    background-color: #086BA8;
+    color: white;
+    height: fit-content;
+    z-index: 99999;
+}
+nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+nav li {
+    display: inline-block;
+    padding: 20px;
+    height: 100%;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav a:hover, nav li:hover {
+    background-color: #AD4900;
+}
+nav.active {
+    background-color: #0096F5;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+footer aside {
+    margin-right: auto;
+    margin-left: 50%;
+}
+#rest {
+    float: left;
+    margin-left: 15%;
+}
+footer {
+    background-color: #086BA8;
+    color: white;
+    height: fit-content;
+}
+footer h2, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+footer h2 {
+    font-size: 20px;
+    padding-top: 20px;
+}
+footer p {
+    padding-left: 10px;
+}

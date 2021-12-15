@@ -1,0 +1,42 @@
+section {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1850px;
+    background-color: white;
+}
+section p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: justify;
+    text-justify: inter-word;
+}
+section img {
+    width: 100%;
+}
+section aside {
+    width: 30%;
+}
+article {
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+article h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+article .left, article .right {
+    width: 30%;
+}
+article .left {
+    float: left;
+}
+article .right {
+    float: right;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
