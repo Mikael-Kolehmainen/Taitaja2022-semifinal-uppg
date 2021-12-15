@@ -9,20 +9,28 @@ body {
     letter-spacing: 1px;
     margin: 0;
 }
-header {
-    text-align: center;
+.float-container {
+    background-color: #AD4900;
+    color: white;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: #086BA8;
-    color: white;
+    height: 50px;
+    z-index: 99999;
+}
+header, nav {
+    width: 50;
+    margin: 0;
+    padding: 0;
+    float: left;
+    background-color: #AD4900;
+    height: fit-content;
+}
+header {
+    text-align: left;
 }
 nav {
-    width: 100%;
-    text-align: center;
-    background-color: #086BA8;
-    color: white;
-    height: fit-content;
-    z-index: 99999;
+    text-align: right;
+    float: right;
 }
 nav ul {
     list-style: none;
@@ -39,15 +47,40 @@ nav a {
     color: white;
 }
 nav a:hover, nav li:hover {
-    background-color: #AD4900;
+    background-color: #743000;
 }
-nav.active {
-    background-color: #0096F5;
+nav.active, li.active {
+    background-color: #db5b00;
 }
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
+}
+section {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1850px;
+    background-color: white;
+}
+section p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: justify;
+    text-justify: inter-word;
+}
+section img {
+    width: 100%;
+}
+article {
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+article h1 {
+    font-size: 32px;
+    font-weight: bold;
 }
 footer aside {
     margin-right: auto;
@@ -58,7 +91,7 @@ footer aside {
     margin-left: 15%;
 }
 footer {
-    background-color: #086BA8;
+    background-color: #AD4900;
     color: white;
     height: fit-content;
 }

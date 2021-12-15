@@ -10,16 +10,18 @@
         <script src="sticky.js" async></script>
     </head>
     <body>
-        <header>
-            <img src="img/logo/Logo light.png" alt="Company logo">
-            <nav id="navbar">
+        <div class="float-container" id="top">
+            <header>
+                <img src="img/logo/Logo light.png" alt="Company logo">
+            </header>
+            <nav>
                 <ul>
                     <a href="index.php"><li>Etusivu</li></a>
-                    <a href="template.php"><li>Esimerkkisivu</li></a>
+                    <a href="template.php" class="active"><li class="active">Esimerkkisivu</li></a>
                     <a href="login.php"><li>Kirjaudu</li></a>
                 </ul>
             </nav>
-        </header>
+        </div>
         <section>
             <!-- Sätt lorem ipsum text och bilder som i anvisningarna -->
         </section>

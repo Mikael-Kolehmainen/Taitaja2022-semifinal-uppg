@@ -7,22 +7,26 @@
         <!-- Stylesheets -->
         <link href="main.css" rel="stylesheet" type="text/css">
         <link href="hero.css" rel="stylesheet" type="text/css">
-        <link href="sections.css" rel="stylesheet" type="text/css">
+        <link href="two-colums.css" rel="stylesheet" type="text/css">
+        <link href="slideshow.css" rel="stylesheet" type="text/css">
         <!-- Scripts -->
         <script src="sticky.js" async></script>
+        <script src="slideshow.js" async></script>
     </head>
     <body>
-        <header>
-            <img src="img/logo/Logo light.png" alt="Company logo">
-            <nav id="navbar">
+        <div class="float-container" id="top">
+            <header>
+                <img src="img/logo/Logo light.png" alt="Company logo">
+            </header>
+            <nav>
                 <ul>
-                    <a href="index.php"><li>Etusivu</li></a>
+                    <a href="index.php" class="active"><li class="active">Etusivu</li></a>
                     <a href="template.php"><li>Esimerkkisivu</li></a>
                     <a href="login.php"><li>Kirjaudu</li></a>
                 </ul>
             </nav>
-        </header>
-        <video class="hero-background" autoplay loop muted>
+        </div>
+        <video class="hero-background" autoplay loop muted poster="video/poster.jpg">
             <source src="video/background-video.mp4" type="video/mp4">
         </video>
             <div class="hero-text">
@@ -30,7 +34,7 @@
                 <button>Lue lisää</button>
             </div>
         <section>
-            <!-- Yritysesittely -->
+            <!-- Yritysesittely - two-columns.css-->
             <article>
                 <div class="row">
                     <div class="left">
@@ -40,7 +44,7 @@
                         <p>Oikein rakentaminen onnistuu hyvillä ratkaisuilla - Tervetuloa asioimaan Ruosteiseen Rautaan!</p>
                         <p>Ruosteinen Rauta on Porin Yrittäjien jäsenyritys. Tutustu Porin Yrittäjien toimintaan: <a href="https://www.yrittajat.fi/paikallisyhdistykset/porin-yrittajat/" target="_blank">https://www.yrittajat.fi/paikallisyhdistykset/porin-yrittajat/</a></p>
                     </div>
-                    <aside style="float: right"><img src="img/unsplash images/george-pastushok-d0yNnTEjEWY-unsplash.jpg" alt="kuva sahasta"></aside>
+                    <aside style="float: right; margin-right: 5%"><img src="img/unsplash images/george-pastushok-d0yNnTEjEWY-unsplash.jpg" alt="kuva sahasta"></aside>
                 </div>
                 <div class="row">
                     <div class="right">
@@ -49,32 +53,56 @@
                         <p>Yrityksen perustaja Rauno Rauta on palvellut asiakkaita vuodesta 1958 ja vuonna 2022 Tuukka Rauta jatkaa yrityksen ohjaksissa Reino Raudan jäädessä eläkkeelle. Tuukka Rauta on toiminut yrityksessä jo vuodesta 2000.  Vuonna 2021 yrityksessämme työskenteli 100 alan ammattilaista palvellen asiakkaitamme rautaisella ammattitaidolla.</p>
                         <p>Yrityksemme ideana on alusta lähtien tarjota rakennus ja metallialan tuotteita ja palveluita edulliseen hintaan. Palveluumme on aina kuulunut ammattitaitoinen opastus ja asiantuntemus, jota asiakkaamme useiden sukupolvien ajan ovat hyödyntäneet projekteissaan. Voimmekin rehellisesti sanoa, että tunnemme alan läpikotaisin ja tämän pitkän kokemuksen tuomalla varmuudella pystymme tarjoamaan asiakkaillemme kaikki rauta ja metallialanpalvelut luotettavasti ja laadukkaasti – jo vuodesta 1958.</p>
                     </div>
-                    <aside style="float: left"><img src="img/unsplash images/george-pastushok-d0yNnTEjEWY-unsplash.jpg" alt="kuva sahasta"></aside>
+                    <aside style="float: left; margin-left: 5%"><img src="img/unsplash images/tekton-e6Wr8LaH-Q8-unsplash.jpg" alt="kuva sahasta"></aside>
                 </div>
             </article>
-            <!-- Referenssejä -->
-            <article>
-                <!-- Referenssi 1 -->
-                <div id="reference1">
-                    <h1>Suurhanke: Helsinki – Tallinna Silta / Valtakunnan Silta Oy</h1>
-                    <img src="img/referenssi1.jpg" alt="kuva sillasta">
-                    <p>Massiivinen, reippaan punainen Tallinnan silta avattiin liikenteelle tammikuussa 2020. Siltahanke on yksi Suomen ja Viron suurimpia yhteisiä rakennushankkeita. Tähän merkittävään rakennushankkeeseen osallistuivat kaikki suurimmat rakennusyhtiöt ja toimijat Suomesta ja Virosta.  Ruosteinen Rauta Oy: toimitti kaikki sillan kaiteitten terärakenteiden tukevat pultit ja kaapelien suojaputket pääurakoitsija Valtakunnan Sillat Oy:lle. Pultti ja suojaputkitoimitukset saatiin toimitettua aikataulun mukaisesti.</p>
-                    <p>Valtakunnan Sillat Oy valitsi Ruosteinen Rauta Oy:n pultti ja suojaputkitoimittajaksi aikaisemman yhteistyön perusteella luottaen, että hankkeen tiukassa aikataulussa pysytään, kun pultit ja suojaputkitoimituksissa on luotettava kumppani.</p>
-                    <p>Seppo Silta kertookin yhteistyöstä ja toimituksista seuraavasti ”Ruosteinen Rauta yhtenä suurimpana rautakauppa ja metallialan toimittajana pystyy toimittamaan suuria määriä rakennustarvikkeita kriittisiin projekteihin. Yhteistyö Ruosteisen Raudan kanssa on toiminut aina hyvin ja tehokkaasti”.</p>
+            <!-- Referenssejä - carousel.css-->
+            <article id="home-page-section">
+                <div class="slideshow-container">
+                    <!-- Referenssi 1 -->
+                    <div class="mySlides fade" id="reference1">
+                        <div class="left">
+                            <img src="img/referenssi1.jpg" alt="kuva sillasta">
+                        </div>
+                        <div class="right">
+                            <h1>Suurhanke: Helsinki – Tallinna Silta / Valtakunnan Silta Oy</h1>
+                            <p>Massiivinen, reippaan punainen Tallinnan silta avattiin liikenteelle tammikuussa 2020. Siltahanke on yksi Suomen ja Viron suurimpia yhteisiä rakennushankkeita. Tähän merkittävään rakennushankkeeseen osallistuivat kaikki suurimmat rakennusyhtiöt ja toimijat Suomesta ja Virosta.  Ruosteinen Rauta Oy: toimitti kaikki sillan kaiteitten terärakenteiden tukevat pultit ja kaapelien suojaputket pääurakoitsija Valtakunnan Sillat Oy:lle. Pultti ja suojaputkitoimitukset saatiin toimitettua aikataulun mukaisesti.</p>
+                            <p>Valtakunnan Sillat Oy valitsi Ruosteinen Rauta Oy:n pultti ja suojaputkitoimittajaksi aikaisemman yhteistyön perusteella luottaen, että hankkeen tiukassa aikataulussa pysytään, kun pultit ja suojaputkitoimituksissa on luotettava kumppani.</p>
+                            <p>Seppo Silta kertookin yhteistyöstä ja toimituksista seuraavasti ”Ruosteinen Rauta yhtenä suurimpana rautakauppa ja metallialan toimittajana pystyy toimittamaan suuria määriä rakennustarvikkeita kriittisiin projekteihin. Yhteistyö Ruosteisen Raudan kanssa on toiminut aina hyvin ja tehokkaasti”.</p>
+                        </div>
+                    </div>
+                    <!-- Referenssi 2 -->
+                    <div class="mySlides fade" id="reference2">
+                        <div class="left">
+                            <img src="img/referenssi2.webp" alt="kuva kaivurista">
+                        </div>
+                        <div class="right">
+                            <h1>Konepalvelut vuokraus / Koneline Oy</h1>
+                            <p>Koneline Oy tarjoaa maansiirto ja maatyö palveluita rakentajille. Vuonna 2021 KoneLine Oy luopui omista maansiirtokoneistaan ja käyttää urakoissaan Ruosteinen Rauta Oy:n vuokralaitevalikoimaa.</p>
+                            <p>”Ruosteinen Rauta Oy” toimittaa meille projekteihin tarvittavia laitteistoja ja koneita. Koneet ja laitteet ovat aina toimivia ja hyvin huollettuja. Siirtyessämme vuokrakoneiden käyttöön, olemme pystyneet tarjoamaan maansiirtotöitä erittäin edulliseen hintaan asiakkaillemme. Vuokrakoneiden käytössä pystymme käyttämään ja saamaan käyttöömme juuri oikean laitteen oikeaan aikaan ja tämä luo liiketoimintaan kustannustehokkuutta. Ruosteinen Rauta on merkittävä kumppanimme, joka mahdollistaa toimintamme joustavuuden. Kannattavuutemme on kasvanut 89% kun siirryimme hyödyntämään Ruosteisen Raudan vuokrakonevalikoimaa toiminnassamme. ” Kertoo toimitusjohtaja Jorma Kontio Koneline Oy:stä. Koneline Oy suositteleekin Ruosteisen Raudan konevalikoimaan pienemmille ja suuremmille työmaille.</p>
+                        </div>
+                    </div>
+                    <!-- Referenssi 3 -->
+                    <div class="mySlides fade" id="reference3">
+                        <div class="left">
+                            <img src="img/referenssi3.jpg" alt="kuva talosta">
+                        </div>
+                        <div class="right">
+                            <h1>Talonrakentaja Olli Orava</h1>
+                            <p>Uniikki koti rakentui Poriin vuonna 2019. Rakentaja Jussi Ahola rakensi unelmiensa kodin hankkien kaikki rakennustarvikkeet Ruosteisen Raudan monipuolisesta valikoimasta. Ahola on 12 metriä korkea moniulotteinen rakennus, oikea taideteos, joka toteutettiin Arkkitehtitoimisto Ainutlaatuinen koti Oy:n suunnitelmien pohjalta.</p>
+                            <p>Jussi Ahola kommentoi rakennusprojektiaan seuraavasti: ”Rakentaminen oli helppoa ja nopeaa Ruosteisen Raudan avulla. Monipuolinen valikoima mahdollisti kaikkien tarvikkeiden hankinnan yhdestä ja samasta paikasta, jolloin säästin kustannuksista ja sain aina kokonaisvaltaista palvelua kaikkiin rakentamiseen liittyviin kysymyksiin ja palveluihin liittyen. Suosittelen Ruosteisen Raudan valikoimaa lämpimästi kaikille rakentajille pieniin ja isoihin projekteihin.”</p>
+                        </div>
+                    </div>
+                    <!-- Seurava ja takaisin nappit -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-                <!-- Referenssi 2 -->
-                <div id="reference2">
-                    <h1>Konepalvelut vuokraus / Koneline Oy</h1>
-                    <img src="img/referenssi2.webp" alt="kuva kaivurista">
-                    <p>Koneline Oy tarjoaa maansiirto ja maatyö palveluita rakentajille. Vuonna 2021 KoneLine Oy luopui omista maansiirtokoneistaan ja käyttää urakoissaan Ruosteinen Rauta Oy:n vuokralaitevalikoimaa.</p>
-                    <p>”Ruosteinen Rauta Oy” toimittaa meille projekteihin tarvittavia laitteistoja ja koneita. Koneet ja laitteet ovat aina toimivia ja hyvin huollettuja. Siirtyessämme vuokrakoneiden käyttöön, olemme pystyneet tarjoamaan maansiirtotöitä erittäin edulliseen hintaan asiakkaillemme. Vuokrakoneiden käytössä pystymme käyttämään ja saamaan käyttöömme juuri oikean laitteen oikeaan aikaan ja tämä luo liiketoimintaan kustannustehokkuutta. Ruosteinen Rauta on merkittävä kumppanimme, joka mahdollistaa toimintamme joustavuuden. Kannattavuutemme on kasvanut 89% kun siirryimme hyödyntämään Ruosteisen Raudan vuokrakonevalikoimaa toiminnassamme. ” Kertoo toimitusjohtaja Jorma Kontio Koneline Oy:stä. Koneline Oy suositteleekin Ruosteisen Raudan konevalikoimaan pienemmille ja suuremmille työmaille.</p>
-                </div>
-                <!-- Referenssi 3 -->
-                <div id="reference3">
-                    <h1>Talonrakentaja Olli Orava</h1>
-                    <img src="img/referenssi3.jpg" alt="kuva talosta">
-                    <p>Uniikki koti rakentui Poriin vuonna 2019. Rakentaja Jussi Ahola rakensi unelmiensa kodin hankkien kaikki rakennustarvikkeet Ruosteisen Raudan monipuolisesta valikoimasta. Ahola on 12 metriä korkea moniulotteinen rakennus, oikea taideteos, joka toteutettiin Arkkitehtitoimisto Ainutlaatuinen koti Oy:n suunnitelmien pohjalta.</p>
-                    <p>Jussi Ahola kommentoi rakennusprojektiaan seuraavasti: ”Rakentaminen oli helppoa ja nopeaa Ruosteisen Raudan avulla. Monipuolinen valikoima mahdollisti kaikkien tarvikkeiden hankinnan yhdestä ja samasta paikasta, jolloin säästin kustannuksista ja sain aina kokonaisvaltaista palvelua kaikkiin rakentamiseen liittyviin kysymyksiin ja palveluihin liittyen. Suosittelen Ruosteisen Raudan valikoimaa lämpimästi kaikille rakentajille pieniin ja isoihin projekteihin.”</p>
+                <br>
+                <!-- Pisteet -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </article>
             <!-- Palvelut -->
@@ -144,6 +172,7 @@
             <!-- Yhteystiedot -->
             <div id="rest">
                 <img src="img/logo/Logo light.png" alt="Company logo">
+                <!-- <img src="img/SY_satakunta_RGB_musta.jpg" alt="Yrittäjät"> -->
                 <h2>Ruosteinen Rauta Oy</h2>
                 <p>Urheilutie 1,</p>
                 <p>28500 Pori</p>
@@ -154,23 +183,23 @@
             <aside>
                 <form id="contact-us" name="contact-us" action="" method="POST" autocomplete="off">
                     <div class="floating-label-group">
-                        <input type="text" id="fname" name="fname" class="form-control" autocomplete="off" autofocus required />
+                        <input type="text" id="fname" name="fname" class="form-control" autocomplete="off" required />
                         <label class="floating-label">Etunimi</label>
                     </div>
                     <div class="floating-label-group">
-                        <input type="text" id="lname" name="lname" class="form-control" autocomplete="off" autofocus required />
+                        <input type="text" id="lname" name="lname" class="form-control" autocomplete="off" required />
                         <label class="floating-label">Sukunimi</label>
                     </div>
                     <div class="floating-label-group">
-                        <input type="text" id="phone" name="phone" class="form-control" autocomplete="off" autofocus required />
+                        <input type="text" id="phone" name="phone" class="form-control" autocomplete="off" required />
                         <label class="floating-label">Puhelinnumero</label>
                     </div>
                     <div class="floating-label-group">
-                        <input type="text" id="e-mail" name="e-mail" class="form-control" autocomplete="off" autofocus required />
+                        <input type="text" id="e-mail" name="e-mail" class="form-control" autocomplete="off" required />
                         <label class="floating-label">Sähköposti</label>
                     </div>
                     <div class="floating-label-group">
-                        <input type="text" id="msg" name="msg" class="form-control" autocomplete="off" autofocus required />
+                        <input type="text" id="msg" name="msg" class="form-control" autocomplete="off" required />
                         <label class="floating-label">Viesti</label>
                     </div>
                     <input id="confirmation" type="submit" value="Lähetä">

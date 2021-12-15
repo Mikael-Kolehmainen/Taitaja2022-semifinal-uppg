@@ -1,0 +1,23 @@
+section aside {
+    width: 40%;
+    margin-top: 40px;
+}
+article .left, article .right {
+    width: 40%;
+}
+article .left {
+    float: left;
+    margin-left: 5%;
+}
+article .right {
+    float: right;
+    margin-right: 5%;
+}
+.row {
+    margin-bottom: 30px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

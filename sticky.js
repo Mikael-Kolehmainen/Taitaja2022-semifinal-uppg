@@ -7,14 +7,14 @@ if (document.readyState == 'loading') {
 function ready() {
     window.onscroll = function() {myFunction()}
 
-    var navbar = document.getElementById("navbar")
-    var sticky = navbar.offsetTop;
+    var top = document.getElementById("top")
+    var sticky = top.offsetTop;
 
     function myFunction() {
         if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
+            top.classList.add("sticky")
         } else {
-            navbar.classList.remove("sticky")
+            top.classList.remove("sticky")
         }
     }
 }
