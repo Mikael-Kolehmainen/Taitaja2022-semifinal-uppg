@@ -1,0 +1,52 @@
+#contact-us {
+    margin-top: 50px;
+}
+#contact-us input {
+    margin-left: 5px;
+    margin-bottom: 6px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #0096F5;
+    border-radius: 6px;
+    width: 200px;
+}
+#contact-us input:focus {
+    outline: none !important;
+    border: 2px solid #0096F5;
+}
+.floating-label-group {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.floating-label {
+    font-size: 14px;
+    color: #054065;
+    position: absolute;
+    pointer-events: none;
+    top: 14px;
+    left: 12px;
+    transition: all 0.1s ease;
+}
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+    top: -21px;
+    bottom: 0px;
+    left: 0px;
+    font-size: 16px;
+    opacity: 1;
+    color: white;
+}
+#contact-us #confirmation {
+    width: 227px;
+    font-weight: bold;
+    background-color: white;
+    color: #0096F5;
+    border: 1px solid #0096F5;
+}
+#contact-us #confirmation:hover {
+    border: 2px solid #0096F5;
+    background-color: #0096F5;
+    color: white;
+    cursor: pointer;
+}

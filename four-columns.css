@@ -1,0 +1,21 @@
+.services .left, .services .right {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.services .left {
+    float: left;
+}
+.services .right {
+    float: right;
+}
+.services .row {
+    margin-bottom: 30px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.services .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -9,6 +9,8 @@
         <link href="hero.css" rel="stylesheet" type="text/css">
         <link href="two-colums.css" rel="stylesheet" type="text/css">
         <link href="slideshow.css" rel="stylesheet" type="text/css">
+        <link href="four-columns.css" rel="stylesheet" type="text/css">
+        <link href="form.css" rel="stylesheet" type="text/css">
         <!-- Scripts -->
         <script src="sticky.js" async></script>
         <script src="slideshow.js" async></script>
@@ -60,7 +62,7 @@
             <article id="home-page-section">
                 <div class="slideshow-container">
                     <!-- Referenssi 1 -->
-                    <div class="mySlides fade" id="reference1">
+                    <div class="mySlides" id="reference1">
                         <div class="left">
                             <img src="img/referenssi1.jpg" alt="kuva sillasta">
                         </div>
@@ -72,7 +74,7 @@
                         </div>
                     </div>
                     <!-- Referenssi 2 -->
-                    <div class="mySlides fade" id="reference2">
+                    <div class="mySlides" id="reference2">
                         <div class="left">
                             <img src="img/referenssi2.webp" alt="kuva kaivurista">
                         </div>
@@ -83,7 +85,7 @@
                         </div>
                     </div>
                     <!-- Referenssi 3 -->
-                    <div class="mySlides fade" id="reference3">
+                    <div class="mySlides" id="reference3">
                         <div class="left">
                             <img src="img/referenssi3.jpg" alt="kuva talosta">
                         </div>
@@ -99,80 +101,82 @@
                 </div>
                 <br>
                 <!-- Pisteet -->
-                <div style="text-align:center">
+                <div style="text-align: center">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </article>
             <!-- Palvelut -->
-            <article>
-                <h1>Palvelut</h1>
+            <article class="services">
+                <h1 style="text-align: center">Palvelut</h1>
                 <!-- Palvelu 1 -->
-                <div id="service1">
-                    <h1>Rakennustarvikkeet</h1>
-                    <p>Ruosteinen Rauta tarjoaa rakennustarvikkeet alan johtavilta merkeiltä nopeasti toimitettuna suoraan työmaalle. Ruosteisen Raudan Rakennustarvikkeet – palvelun avulla rakentaminen on helppoa ja edullista. Laadukkuus ja edullisuus ovat ominaisuuksia, joita ostajat odottavat rakennustarvikkeilta. Rakennustarvikkeet - valikoimasta löytyy paljon vaihtoehtoja pienempiin tai isompiin rakennus- tai remontointiprojekteihin.</p>
-                    <ul>
-                        <li>Perustustarvikkeet</li>
-                        <li>Rakennusmateriaalit</li>
-                        <li>Sähkötarvikkeet</li>
-                        <li>Ilmanvaihto</li>
-                        <li>Lämmitys</li>
-                        <li>LVI</li>
-                        <li>Työkalut ja tarvikkeet</li>
-                    </ul>
-                </div>
-                <!-- Palvelu 2 -->
-                <div id="service2">
-                    <h1>Sisustustarvikkeet</h1>
-                    <p>Kun talo on rakennettu, voidaan keskittyä sisustamiseen. Me autamme sinua myös kaikissa sisustamiseen liittyvissä ratkaisuissa. Valikoimaamme kuuluu kaikki sisustukseen tarvittavat tuotteet ja ratkaisut, kuten keittiökalusteet, takat, tapetit, lattiapinnoitteet, laatat, koukut ja maalit.</p>
-                    <ul>
-                        <li>Keittiö</li>
-                        <li>Kylpyhuone ja wc</li>
-                        <li>Laatat | lattialaatat, seinälaatat, kuviolaatat</li>
-                        <li>Lattiat | parketit, laminaatit, korkkilattiat, vinyylilattiat</li>
-                        <li>Ovet</li>
-                        <li>Kiukaat</li>
-                        <li>Tapetit</li>
-                        <li>Koukut naulakot ja hyllyt</li>
-                        <li>Takat</li>
-                        <li>Valaistus</li>
-                    </ul>
-                </div>
-                <!-- Palvelu 3 -->
-                <div id="service3">
-                    <h1>Piharakennus</h1>
-                    <p>Laajasta valikoimastamme löydät kaiken tarvittavan pihan suunnitteluun ja rakentamiseen.</p>
-                    <ul>
-                        <li>Pihakivetys ja päällysteet</li>
-                        <li>Puutarhakalusteet ja tarvikkeet</li>
-                        <li>Kylpytynnyrit ja uima-altaat</li>
-                        <li>Pihavalaisimet</li>
-                    </ul>
-                </div>
-                <!-- Palvelu 4 -->
-                <div id="service4">
-                    <h1>Konevuokraus</h1>
-                    <p>Vuokraamme laadukkaat ja turvalliset koneet erikokoisiin projekteihin yrityksille, yhteistyökumppaneille ja yksityisille rakentajille ja remontoijille. Varaa ja tilaa tarvitsemasi kone tai laite, kuljetamme koneen kohteeseen sovittuna ajankohtana. Esimerkkejä koneista ja laitteistamme:</p>
-                    <ul>
-                        <li>Henkilönostimet</li>
-                        <li>Nosto- ja siirtokalusto</li>
-                        <li>Maantiivistyskalusto</li>
-                        <li>Maansiirtokalusto</li>
-                        <li>Peräkärryt</li>
-                        <li>Avant</li>
-                        <li>Generaattorit</li>
-                    </ul>
+                <div class="row">
+                    <div class="left" id="service1">
+                        <h2>Rakennustarvikkeet</h2>
+                        <p>Ruosteinen Rauta tarjoaa rakennustarvikkeet alan johtavilta merkeiltä nopeasti toimitettuna suoraan työmaalle. Ruosteisen Raudan Rakennustarvikkeet – palvelun avulla rakentaminen on helppoa ja edullista. Laadukkuus ja edullisuus ovat ominaisuuksia, joita ostajat odottavat rakennustarvikkeilta. Rakennustarvikkeet - valikoimasta löytyy paljon vaihtoehtoja pienempiin tai isompiin rakennus- tai remontointiprojekteihin.</p>
+                        <ul>
+                            <li>Perustustarvikkeet</li>
+                            <li>Rakennusmateriaalit</li>
+                            <li>Sähkötarvikkeet</li>
+                            <li>Ilmanvaihto</li>
+                            <li>Lämmitys</li>
+                            <li>LVI</li>
+                            <li>Työkalut ja tarvikkeet</li>
+                        </ul>
+                    </div>
+                    <!-- Palvelu 2 -->
+                    <div class="left" id="service2">
+                        <h2>Sisustustarvikkeet</h2>
+                        <p>Kun talo on rakennettu, voidaan keskittyä sisustamiseen. Me autamme sinua myös kaikissa sisustamiseen liittyvissä ratkaisuissa. Valikoimaamme kuuluu kaikki sisustukseen tarvittavat tuotteet ja ratkaisut, kuten keittiökalusteet, takat, tapetit, lattiapinnoitteet, laatat, koukut ja maalit.</p>
+                        <ul>
+                            <li>Keittiö</li>
+                            <li>Kylpyhuone ja wc</li>
+                            <li>Laatat | lattialaatat, seinälaatat, kuviolaatat</li>
+                            <li>Lattiat | parketit, laminaatit, korkkilattiat, vinyylilattiat</li>
+                            <li>Ovet</li>
+                            <li>Kiukaat</li>
+                            <li>Tapetit</li>
+                            <li>Koukut naulakot ja hyllyt</li>
+                            <li>Takat</li>
+                            <li>Valaistus</li>
+                        </ul>
+                    </div>
+                    <!-- Palvelu 3 -->
+                    <div class="right" id="service3">
+                        <h2>Piharakennus</h2>
+                        <p>Laajasta valikoimastamme löydät kaiken tarvittavan pihan suunnitteluun ja rakentamiseen.</p>
+                        <ul>
+                            <li>Pihakivetys ja päällysteet</li>
+                            <li>Puutarhakalusteet ja tarvikkeet</li>
+                            <li>Kylpytynnyrit ja uima-altaat</li>
+                            <li>Pihavalaisimet</li>
+                        </ul>
+                    </div>
+                    <!-- Palvelu 4 -->
+                    <div class="right" id="service4">
+                        <h2>Konevuokraus</h2>
+                        <p>Vuokraamme laadukkaat ja turvalliset koneet erikokoisiin projekteihin yrityksille, yhteistyökumppaneille ja yksityisille rakentajille ja remontoijille. Varaa ja tilaa tarvitsemasi kone tai laite, kuljetamme koneen kohteeseen sovittuna ajankohtana. Esimerkkejä koneista ja laitteistamme:</p>
+                        <ul>
+                            <li>Henkilönostimet</li>
+                            <li>Nosto- ja siirtokalusto</li>
+                            <li>Maantiivistyskalusto</li>
+                            <li>Maansiirtokalusto</li>
+                            <li>Peräkärryt</li>
+                            <li>Avant</li>
+                            <li>Generaattorit</li>
+                        </ul>
+                    </div>
                 </div>
             </article>
         </section>
         <!-- Yhteystiedot & Yhteydenottolomake -->
         <footer>
-            <h1>Ota yhteyttä</h1>
+            <h1 style="text-align: center">Ota yhteyttä</h1>
             <!-- Yhteystiedot -->
             <div id="rest">
-                <img src="img/logo/Logo light.png" alt="Company logo">
-                <!-- <img src="img/SY_satakunta_RGB_musta.jpg" alt="Yrittäjät"> -->
+                <img src="img/logo/Logo light.png" alt="Company logo"><br>
+                <img id="yrittajat" src="img/SY_satakunta_RGB_musta.jpg" alt="Yrittäjät">
                 <h2>Ruosteinen Rauta Oy</h2>
                 <p>Urheilutie 1,</p>
                 <p>28500 Pori</p>
@@ -181,6 +185,7 @@
             </div>
             <!-- Yhteydenottolomake -->
             <aside>
+                <h2>Yhteydenottolomake</h2>
                 <form id="contact-us" name="contact-us" action="" method="POST" autocomplete="off">
                     <div class="floating-label-group">
                         <input type="text" id="fname" name="fname" class="form-control" autocomplete="off" required />
@@ -198,14 +203,15 @@
                         <input type="text" id="e-mail" name="e-mail" class="form-control" autocomplete="off" required />
                         <label class="floating-label">Sähköposti</label>
                     </div>
+                    <!-- Byt input type -->
                     <div class="floating-label-group">
                         <input type="text" id="msg" name="msg" class="form-control" autocomplete="off" required />
                         <label class="floating-label">Viesti</label>
                     </div>
-                    <input id="confirmation" type="submit" value="Lähetä">
+                    <input id="confirmation" type="submit" value="Lähetä" style="margin-top: 15px">
                 </form>
             </aside>
-            <p>Mikael Kolehmainen &copy; 2022</p>
+            <p id="creator">Mikael Kolehmainen &copy; 2022</p>
         </footer>
     </body>
 </html>

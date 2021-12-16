@@ -2,8 +2,10 @@
     font-family: barlow;
     src: url(font/Barlow-Regular.ttf);
 }
-body {
+html {
     font-family: barlow;
+}
+body {
     color: #054065;
     background: #FFF9F5;
     letter-spacing: 1px;
@@ -31,6 +33,7 @@ header {
 nav {
     text-align: right;
     float: right;
+    font-weight: bold;
 }
 nav ul {
     list-style: none;
@@ -63,7 +66,7 @@ section {
     max-width: 1850px;
     background-color: white;
 }
-section p {
+p {
     font-size: 16px;
     font-weight: normal;
     line-height: 1.4;
@@ -72,28 +75,46 @@ section p {
 }
 section img {
     width: 100%;
+    border: 1px solid black;
 }
 article {
     padding: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-article h1 {
+h1 {
     font-size: 32px;
     font-weight: bold;
 }
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+footer {
+    background-color: #AD4900;
+    color: white;
+    padding-bottom: 5px;
+}
+footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 footer aside {
     margin-right: auto;
-    margin-left: 50%;
+    margin-left: 60%;
+}
+footer aside:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 #rest {
     float: left;
     margin-left: 15%;
 }
-footer {
-    background-color: #AD4900;
-    color: white;
-    height: fit-content;
+footer h1 {
+    padding-top: 10px;
 }
 footer h2, p {
     margin-top: 0;
@@ -105,4 +126,12 @@ footer h2 {
 }
 footer p {
     padding-left: 10px;
+}
+footer #creator {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+footer #yrittajat {
+    width: 150px;
 }

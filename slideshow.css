@@ -1,11 +1,13 @@
 .slideshow-container {
-    width: 100%;
+    width: 90%;
     position: relative;
     margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .mySlides {
     display: none;
-    width: 50%;
+    width: 100%;
     margin-right: 0;
 }
 .mySlides:after {
@@ -15,14 +17,16 @@
 }
 .mySlides img {
     width: 100%;
-    height: 400px;
+    height: 500px;
+    margin-top: 40px;
 }
 .mySlides .left, .mySlides .right {
     width: 40%;
 }
 .mySlides .left {
     float: left;
-    margin-left: 5%;
+    margin-left: 0%;
+    width: 50%;
 }
 .mySlides .right {
     float: right;
@@ -61,19 +65,5 @@
 }
 .active, .dot:hover {
     background-color: #717171;
-}
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
 }
   
