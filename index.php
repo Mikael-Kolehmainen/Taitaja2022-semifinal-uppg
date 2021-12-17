@@ -2,32 +2,10 @@
 <html>
     <head>
         <title>Ruosteinen Rauta Oy - Etusivu</title>
-        <!-- Favicon -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Stylesheets -->
-        <link href="main.css" rel="stylesheet" type="text/css">
-        <link href="hero.css" rel="stylesheet" type="text/css">
-        <link href="two-colums.css" rel="stylesheet" type="text/css">
-        <link href="slideshow.css" rel="stylesheet" type="text/css">
-        <link href="four-columns.css" rel="stylesheet" type="text/css">
-        <link href="form.css" rel="stylesheet" type="text/css">
-        <!-- Scripts -->
-        <script src="sticky.js" async></script>
-        <script src="slideshow.js" async></script>
+        <?php require 'head.php'?>
     </head>
     <body>
-        <div class="float-container" id="top">
-            <header>
-                <img src="img/logo/Logo light.png" alt="Company logo">
-            </header>
-            <nav>
-                <ul>
-                    <a href="index.php" class="active"><li class="active">Etusivu</li></a>
-                    <a href="template.php"><li>Esimerkkisivu</li></a>
-                    <a href="login.php"><li>Kirjaudu</li></a>
-                </ul>
-            </nav>
-        </div>
+        <?php require 'header.php'?>
         <video class="hero-background" autoplay loop muted poster="video/poster.jpg">
             <source src="video/background-video.mp4" type="video/mp4">
         </video>
@@ -171,47 +149,6 @@
             </article>
         </section>
         <!-- Yhteystiedot & Yhteydenottolomake -->
-        <footer>
-            <h1 style="text-align: center">Ota yhteyttä</h1>
-            <!-- Yhteystiedot -->
-            <div id="rest">
-                <img src="img/logo/Logo light.png" alt="Company logo"><br>
-                <img id="yrittajat" src="img/SY_satakunta_RGB_musta.jpg" alt="Yrittäjät">
-                <h2>Ruosteinen Rauta Oy</h2>
-                <p>Urheilutie 1,</p>
-                <p>28500 Pori</p>
-                <p>Puh. 044 7011442</p>
-                <p>info@ruosteinenrauta.fi</p>
-            </div>
-            <!-- Yhteydenottolomake -->
-            <aside>
-                <h2>Yhteydenottolomake</h2>
-                <form id="contact-us" name="contact-us" action="" method="POST" autocomplete="off">
-                    <div class="floating-label-group">
-                        <input type="text" id="fname" name="fname" class="form-control" autocomplete="off" required />
-                        <label class="floating-label">Etunimi</label>
-                    </div>
-                    <div class="floating-label-group">
-                        <input type="text" id="lname" name="lname" class="form-control" autocomplete="off" required />
-                        <label class="floating-label">Sukunimi</label>
-                    </div>
-                    <div class="floating-label-group">
-                        <input type="text" id="phone" name="phone" class="form-control" autocomplete="off" required />
-                        <label class="floating-label">Puhelinnumero</label>
-                    </div>
-                    <div class="floating-label-group">
-                        <input type="text" id="e-mail" name="e-mail" class="form-control" autocomplete="off" required />
-                        <label class="floating-label">Sähköposti</label>
-                    </div>
-                    <!-- Byt input type -->
-                    <div class="floating-label-group">
-                        <input type="text" id="msg" name="msg" class="form-control" autocomplete="off" required />
-                        <label class="floating-label">Viesti</label>
-                    </div>
-                    <input id="confirmation" type="submit" value="Lähetä" style="margin-top: 15px">
-                </form>
-            </aside>
-            <p id="creator">Mikael Kolehmainen &copy; 2022</p>
-        </footer>
+        <?php require 'footer.php'?>
     </body>
 </html>
