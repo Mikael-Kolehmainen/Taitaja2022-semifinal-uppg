@@ -14,18 +14,17 @@ body {
 .float-container {
     background-color: #AD4900;
     color: white;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     height: 50px;
     z-index: 99999;
 }
 header, nav {
-    width: 50;
     margin: 0;
     padding: 0;
     float: left;
     background-color: #AD4900;
-    height: fit-content;
+    font-size: 16px;
 }
 header {
     text-align: left;
@@ -39,21 +38,43 @@ nav ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
+    height: 100%;
 }
 nav li {
     display: inline-block;
-    padding: 20px;
-    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    height: 35px;
 }
 nav a {
     text-decoration: none;
     color: white;
+    vertical-align: middle;
 }
-nav a:hover, nav li:hover {
+nav li:hover {
     background-color: #743000;
 }
-nav.active, li.active {
+nav li.active {
     background-color: #db5b00;
+}
+nav #loginBtn {
+    outline: 0;
+    display: inline-block;
+    padding: 0px 25px;
+    text-align: center;
+    font-weight: bold;
+    background-color: white;
+    color: #AD4900;
+    border: 1px solid #743000;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+nav #loginBtn:hover {
+    border: 2px solid #743000;
+    background-color: #743000;
+    color: white;
+    cursor: pointer;
 }
 .sticky {
     position: fixed;

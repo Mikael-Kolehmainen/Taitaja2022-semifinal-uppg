@@ -34,7 +34,7 @@
                     </div>
                     <!-- Byt input type -->
                     <div class="floating-label-group">
-                        <input type="text" id="msg" name="msg" class="form-control" autocomplete="off" required />
+                        <textarea id="msg" name="msg" class="form-control" autocomplete="off" required></textarea>
                         <label class="floating-label">Viesti</label>
                     </div>
                     <input id="confirmation" type="submit" value="Lähetä" style="margin-top: 15px">

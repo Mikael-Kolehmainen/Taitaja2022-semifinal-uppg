@@ -5,16 +5,18 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-    window.onscroll = function() {myFunction()}
+    // window.onscroll = function() {myFunction()}
 
     var top = document.getElementById("top")
-    var sticky = top.offsetTop;
+    // var sticky = top.offsetTop;
 
-    function myFunction() {
+    top.classList.add("sticky")
+
+    /*function myFunction() {
         if (window.pageYOffset >= sticky) {
             top.classList.add("sticky")
         } else {
             top.classList.remove("sticky")
         }
-    }
+    } */
 }

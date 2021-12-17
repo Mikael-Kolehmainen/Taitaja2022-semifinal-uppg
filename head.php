@@ -12,5 +12,6 @@
         <!-- Scripts -->
         <script src="sticky.js" async></script>
         <script src="slideshow.js" async></script>
+        <script src="smooth-scrolling.js" async></script>
     ';
 ?>

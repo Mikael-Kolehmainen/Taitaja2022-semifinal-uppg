@@ -11,7 +11,7 @@
         </video>
             <div class="hero-text">
                 <h1>Oikein rakentaminen onnistuu hyvillä ratkaisuilla - Tervetuloa asioimaan Ruosteiseen Rautaan!</h1>
-                <button>Lue lisää</button>
+                <input type="button" value="Lue lisää" id="read-more" onclick="smoothScroll(document.getElementById('services'))"/>
             </div>
         <section>
             <!-- Yritysesittely - two-columns.css-->
@@ -54,7 +54,7 @@
                     <!-- Referenssi 2 -->
                     <div class="mySlides" id="reference2">
                         <div class="left">
-                            <img src="img/referenssi2.webp" alt="kuva kaivurista">
+                            <img src="img/referenssi2.jpg" alt="kuva kaivurista">
                         </div>
                         <div class="right">
                             <h1>Konepalvelut vuokraus / Koneline Oy</h1>
@@ -86,6 +86,7 @@
                 </div>
             </article>
             <!-- Palvelut -->
+            <div id="services"><br><br></div>
             <article class="services">
                 <h1 style="text-align: center">Palvelut</h1>
                 <!-- Palvelu 1 -->

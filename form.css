@@ -1,7 +1,7 @@
 #contact-us {
     margin-top: 50px;
 }
-#contact-us input {
+#contact-us input, #contact-us #msg {
     margin-left: 5px;
     margin-bottom: 6px;
     padding: 12px;
@@ -10,7 +10,7 @@
     border-radius: 6px;
     width: 200px;
 }
-#contact-us input:focus {
+#contact-us input:focus, #contact-us #msg:focus {
     outline: none !important;
     border: 2px solid #0096F5;
 }
@@ -29,7 +29,9 @@
     transition: all 0.1s ease;
 }
 input:focus ~ .floating-label,
-input:not(:focus):valid ~ .floating-label {
+input:not(:focus):valid ~ .floating-label,
+#msg:focus ~ .floating-label,
+#msg:not(:focus):valid ~ .floating-label {
     top: -21px;
     bottom: 0px;
     left: 0px;
@@ -49,4 +51,9 @@ input:not(:focus):valid ~ .floating-label {
     background-color: #0096F5;
     color: white;
     cursor: pointer;
+}
+#contact-us #msg {
+    resize: vertical;
+    width: 200px;
+    margin-left: 5px;
 }
