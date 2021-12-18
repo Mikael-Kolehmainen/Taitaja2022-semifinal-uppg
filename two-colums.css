@@ -5,11 +5,11 @@ section aside {
 article .left, article .right {
     width: 40%;
 }
-article .left {
+article .left, article .leftImg {
     float: left;
     margin-left: 5%;
 }
-article .right {
+article .right, article .rightImg {
     float: right;
     margin-right: 5%;
 }
@@ -20,4 +20,23 @@ article .right {
     content: "";
     display: table;
     clear: both;
+}
+@media (max-width: 1300px) {
+    article .left, article .right, section aside {
+        width: 45%;
+    }
+    article .left {
+        margin-left: 2.5%;
+    }
+    article .right {
+        margin-right: 2.5%;
+    }
+    article .rightImg, article .leftImg {
+        margin-top: 105px;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+}
+@media (max-width: 900px) {
+    
 }

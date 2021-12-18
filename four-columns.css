@@ -19,3 +19,16 @@
     display: table;
     clear: both;
 }
+@media (max-width: 1300px) {
+    #services {
+        margin-top: 100px;
+    }
+    .services .left, .services .right {
+        width: 46%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+@media (max-width: 900px) {
+    
+}
