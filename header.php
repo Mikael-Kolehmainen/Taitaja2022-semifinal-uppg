@@ -19,7 +19,10 @@
                 <img src="img/logo/Logo light.png" alt="Company logo">
             </header>
             <nav>
-                <ul>
+                <div id="hamburger">
+
+                </div>
+                <ul id="myLinks">
                     <a href="index.php" class='.$indexClass.'><li class='.$indexClass.'>Etusivu</li></a>
                     <a href="template.php" class='.$tempClass.'><li class='.$tempClass.'>Esimerkkisivu</li></a>
                     <a href="login.php" id="loginBtn"><li>Kirjaudu</li></a>

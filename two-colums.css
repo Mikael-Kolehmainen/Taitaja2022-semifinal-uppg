@@ -38,5 +38,12 @@ article .right, article .rightImg {
     }
 }
 @media (max-width: 900px) {
-    
+    article .left, article .right, section aside {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    article .rightImg, article .leftImg {
+        margin-top: 10px;
+    }
 }

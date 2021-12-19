@@ -4,7 +4,7 @@
         <title>Ruosteinen Rauta Oy - Mallisivu</title>
         <?php require 'head.php'?>
     </head>
-    <body>
+    <?php require 'onload.php'?>
         <?php require 'header.php'?>
         <section>
             <!-- Sätt lorem ipsum text och bilder som i anvisningarna -->

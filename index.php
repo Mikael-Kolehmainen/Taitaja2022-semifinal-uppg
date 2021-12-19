@@ -4,7 +4,7 @@
         <title>Ruosteinen Rauta Oy - Etusivu</title>
         <?php require 'head.php'?>
     </head>
-    <body>
+    <?php require 'onload.php'?>
         <?php require 'header.php'?>
         <video class="hero-background" autoplay loop muted poster="video/poster.jpg">
             <source src="video/background-video.mp4" type="video/mp4">
@@ -74,12 +74,14 @@
                         </div>
                     </div>
                     <!-- Seurava ja takaisin nappit -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <div id="buttons">
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
                 </div>
                 <br>
                 <!-- Pisteet -->
-                <div style="text-align: center">
+                <div style="text-align: center" id="dots">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>

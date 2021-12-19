@@ -51,5 +51,13 @@
     }
 }
 @media (max-width: 900px) {
-    
+    .hero-text {
+        top: 25%;
+    }
+    .hero-text h1 {
+        font-size: 42px;
+    }
+    .hero-text #read-more {
+        width: 90%;
+    }
 }

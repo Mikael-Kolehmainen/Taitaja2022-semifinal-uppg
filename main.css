@@ -160,5 +160,16 @@ footer #yrittajat {
     
 }
 @media (max-width: 900px) {
-    
+    .float-container {
+        position: relative;
+    }
+    .float-container #myLinks {
+        display: none;
+    }
+    .float-container a.icon {
+        display: block;
+    }
+    nav li, .float-container #myLinks {
+        width: 100%;
+    }
 }
