@@ -1,10 +1,8 @@
-let style = document.createElement('style');
-
 function myFunction() {
-    if (style.innerHTML == `.float-container #myLinks { display: block;}`) {
-      style.innerHTML = `.float-container #myLinks { display: none;}`
-    } else {
-      style.innerHTML = `.float-container #myLinks { display: block;}`
-    }
-    document.head.appendChild(style);
+  links = document.getElementById('myLinks')
+  if (links.style.display === 'block') {
+    links.style.display = 'none'
+  } else if (window.innerWidth < 900) {
+    links.style.display = 'block'
+  }
 }

@@ -3,7 +3,7 @@
         <!-- Favicon -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Stylesheets -->
-        <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="main.css" rel="stylesheet" type="text/css" id="pagestyle">
         <link href="hero.css" rel="stylesheet" type="text/css">
         <link href="two-colums.css" rel="stylesheet" type="text/css">
         <link href="slideshow.css" rel="stylesheet" type="text/css">
@@ -14,5 +14,6 @@
         <script src="slideshow.js" async></script>
         <script src="smooth-scrolling.js" async></script>
         <script src="hamburger.js" async></script>
+        <script src="resolution-checker.js" async></script>
     ';
 ?>
