@@ -14,6 +14,5 @@
         <script src="slideshow.js" async></script>
         <script src="smooth-scrolling.js" async></script>
         <script src="hamburger.js" async></script>
-        <script src="resolution-check.js" async></script>
     ';
 ?>

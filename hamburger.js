@@ -1,8 +1,10 @@
+let style = document.createElement('style');
+
 function myFunction() {
-    var x = document.getElementById("myLinks")
-    if (x.style.display === "block") {
-      x.style.display = "none"
+    if (style.innerHTML == `.float-container #myLinks { display: block;}`) {
+      style.innerHTML = `.float-container #myLinks { display: none;}`
     } else {
-      x.style.display = "block"
+      style.innerHTML = `.float-container #myLinks { display: block;}`
     }
+    document.head.appendChild(style);
 }

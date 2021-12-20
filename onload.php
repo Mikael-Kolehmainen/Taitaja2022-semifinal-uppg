@@ -1,3 +1,3 @@
 <?php
-    echo '<body onload="checkRes()">'
+    echo '<body>'
 ?>

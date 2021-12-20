@@ -20,7 +20,9 @@
             </header>
             <nav>
                 <div id="hamburger">
-
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <img src="img/menu-bars.png">
+                    </a>
                 </div>
                 <ul id="myLinks">
                     <a href="index.php" class='.$indexClass.'><li class='.$indexClass.'>Etusivu</li></a>
