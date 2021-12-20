@@ -13,6 +13,9 @@ article .right, article .rightImg {
     float: right;
     margin-right: 5%;
 }
+article .left a {
+    word-wrap: break-word;
+}
 .row {
     margin-bottom: 30px;
 }

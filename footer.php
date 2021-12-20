@@ -32,7 +32,6 @@
                         <input type="text" id="e-mail" name="e-mail" class="form-control" autocomplete="off" required />
                         <label class="floating-label">Sähköposti</label>
                     </div>
-                    <!-- Byt input type -->
                     <div class="floating-label-group">
                         <textarea id="msg" name="msg" class="form-control" autocomplete="off" required></textarea>
                         <label class="floating-label">Viesti</label>

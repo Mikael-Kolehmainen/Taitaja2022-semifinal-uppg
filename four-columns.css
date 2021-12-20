@@ -32,3 +32,12 @@
 @media (max-width: 900px) {
     
 }
+@media (max-width: 750px) {
+    .services .left, .services .right {
+        width: 96%;
+    }
+    .services .row {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}

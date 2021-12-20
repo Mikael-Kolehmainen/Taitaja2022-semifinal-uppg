@@ -210,3 +210,15 @@ footer #yrittajat {
         margin-top: 60px;
     }
 }
+@media (max-width: 750px) {
+    #rest, #rest h2, #rest p {
+        float: none;
+        text-align: center;
+        margin-left: 0;
+    }
+    footer aside {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+}

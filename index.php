@@ -22,7 +22,8 @@
                         <p>Ruosteinen Rauta Oy on perustettu 1958. Myymälästämme löydät erittäin laadukkaita rauta ja metallialan tarvikkeita sekä palveluita kaikkeen rakentamiseen – oli kyse sitten korjaamisesta, remontoimisesta tai uuden rakentamisesta suurissa tai pienissä kohteissa. Meillä asiat hoituvat tutulla ammattitaitoisella tavalla alusta loppuun ja kokeneet ammattilaiset auttavat sinua löytämään parhaat ratkaisut, rakennusmateriaalit tuotteet sekä koneet ja vuokralaitteet.</p>
                         <p>Myymälämme valikoimasta saat kaiken yhdellä kertaa suuriin ja pieniin rakennus-, remontointi- ja sisustusprojekteihin ulos ja sisälle. Yrityksemme arvot ovat kestävän kehitys, osaava ja hyvinvoiva henkilökunta sekä työturvallisuus.</p>
                         <p>Oikein rakentaminen onnistuu hyvillä ratkaisuilla - Tervetuloa asioimaan Ruosteiseen Rautaan!</p>
-                        <p>Ruosteinen Rauta on Porin Yrittäjien jäsenyritys. Tutustu Porin Yrittäjien toimintaan: <a href="https://www.yrittajat.fi/paikallisyhdistykset/porin-yrittajat/" target="_blank">https://www.yrittajat.fi/paikallisyhdistykset/porin-yrittajat/</a></p>
+                        <p>Ruosteinen Rauta on Porin Yrittäjien jäsenyritys. Tutustu Porin Yrittäjien toimintaan: </p>
+                        <a href="https://www.yrittajat.fi/paikallisyhdistykset/porin-yrittajat/" target="_blank">https://www.yrittajat.fi/paikallisyhdistykset/porin-yrittajat/</a>
                     </div>
                     <aside class="rightImg"><img src="img/unsplash images/george-pastushok-d0yNnTEjEWY-unsplash.jpg" alt="kuva sahasta"></aside>
                 </div>
