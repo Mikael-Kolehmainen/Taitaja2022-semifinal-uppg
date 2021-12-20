@@ -81,6 +81,9 @@ nav #loginBtn:hover {
 }
 #hamburger {
     display: none;
+    width: fit-content;
+    margin-right: 10px;
+    float: right;
 }
 .sticky {
     position: fixed;
@@ -167,7 +170,7 @@ footer #yrittajat {
 }
 @media (max-width: 900px) {
     .float-container {
-        position: relative;
+        height: fit-content;
     }
     .float-container #myLinks {
         display: none;
@@ -180,5 +183,30 @@ footer #yrittajat {
     }
     #hamburger {
         display: block;
+        height: 40px;
+        width: 40px;
+        margin-top: 5px;
+    }
+    #hamburger img {
+        width: 100%;
+        height: 100%;
+    }
+    nav {
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        z-index: -1;
+    }
+    nav li {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    nav #loginBtn {
+        width: 80%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .float-container #myLinks {
+        margin-top: 60px;
     }
 }

@@ -1,5 +1,5 @@
 .hero-background {
-    height: 50%;
+    height: fit-content;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,5 +59,10 @@
     }
     .hero-text #read-more {
         width: 90%;
+    }
+}
+@media (max-width: 750px) {
+    .hero-text h1 {
+        font-size: 32px;
     }
 }
