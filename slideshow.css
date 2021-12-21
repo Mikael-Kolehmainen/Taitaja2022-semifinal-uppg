@@ -83,11 +83,31 @@
     }
 }
 @media (max-width: 900px) {
+    .mySlides .right {
+        margin-left: 0;
+        width: 42.5%;
+    }
+    .mySlides .left {
+        margin-right: 0;
+    }
+    #home-page-section #dots {
+        margin-top: 220px;
+    }
+}
+@media (max-width: 750px) {
     .mySlides {
         display: inline-block;
     }
     .slideshow-container {
         overflow: scroll;
+    }
+    #home-page-section .desktop {
+        display: none;
+    }
+    .mySlides #reference1,
+    .mySlides #reference2,
+    .mySlides #reference3 {
+        display: block;
     }
 }
   

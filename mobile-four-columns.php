@@ -5,7 +5,7 @@
         <summary onclick="changeChevron(1)">
             Rakennustarvikkeet
             <div class="chevron">
-                <img src="img/icon/chevron-up.png">
+                <img src="img/icon/chevron-down.png">
             </div>
         </summary>
         <div class="left" id="service1">
@@ -26,7 +26,7 @@
         <summary onclick="changeChevron(2)">
             Sisustustarvikkeet
             <div class="chevron">
-                <img src="img/icon/chevron-up.png">
+                <img src="img/icon/chevron-down.png">
             </div>
         </summary>
         <div class="left" id="service2">
@@ -50,7 +50,7 @@
         <summary onclick="changeChevron(3)">
             Piharakennus
             <div class="chevron">
-                <img src="img/icon/chevron-up.png">
+                <img src="img/icon/chevron-down.png">
             </div>
         </summary>
         <div class="right" id="service3">
@@ -68,7 +68,7 @@
         <summary onclick="changeChevron(4)">
             Konevuokraus
             <div class="chevron">
-                <img src="img/icon/chevron-up.png">
+                <img src="img/icon/chevron-down.png">
             </div>
         </summary>
         <div class="right" id="service4">

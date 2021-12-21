@@ -50,8 +50,10 @@
 }
 .services #mobile details > summary::-webkit-details-marker {
     display: none;
-} /* CodePen Home
-Details element with custom arrow */
+}
+.services #mobile details {
+    margin-bottom: 10px;
+}
 @media (max-width: 1300px) {
     #services {
         margin-top: 100px;
@@ -67,16 +69,22 @@ Details element with custom arrow */
 }
 @media (max-width: 750px) {
     .services .left, .services .right {
-        width: 96%;
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
     }
     .services .row {
-        margin-left: 1%;
-        margin-right: 1%;
+        margin-left: 0%;
+        margin-right: 0%;
     }
     .services #mobile {
         display: block;
     }
     .services #desktop {
         display: none;
+    }
+    .services {
+        padding-right: 2px;
+        padding-left: 2px;
     }
 }
