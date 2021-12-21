@@ -15,5 +15,6 @@
         <script src="smooth-scrolling.js" async></script>
         <script src="hamburger.js" async></script>
         <script src="resolution-checker.js" async></script>
+        <script src="summary.js" async></script>
     ';
 ?>
