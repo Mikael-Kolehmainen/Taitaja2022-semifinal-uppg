@@ -4,9 +4,7 @@ window.addEventListener('resize', function(event){
     if (newWidth > 900) {
         changeLinksDisplay()
     }
-    if (newWidth < 750) {
-        showAllSlides()
-    }
+    hideOrShowSlides()
 });
 
 function changeLinksDisplay() {
@@ -18,5 +16,25 @@ function changeLinksDisplay() {
 function showAllSlides() {
     slides = document.getElementsByClassName('mySlides')
 
-    // loopa igenom alla slides o sätt display: block på alla
+    for (var i = 0; i < slides.length; i++) {
+        console.log(slides[i])
+        slides[i].style.display = 'inline-block'
+    }
+}
+function hideAllSlides() {
+    slides = document.getElementsByClassName('mySlides')
+
+    for (var i = 1; i < slides.length; i++) {
+        console.log(slides[i])
+        slides[i].style.display = 'none'
+    }
+}
+function hideOrShowSlides() {
+    var newWidth = window.innerWidth;
+
+    if (newWidth < 750) {
+        showAllSlides()
+    } else if (newWidth > 750) {
+        hideAllSlides()
+    }
 }

@@ -10,6 +10,7 @@ body {
     background: #FFF9F5;
     letter-spacing: 1px;
     margin: 0;
+    overflow: scroll;
 }
 .float-container {
     background-color: #AD4900;

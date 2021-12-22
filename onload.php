@@ -1,3 +1,3 @@
 <?php
-    echo '<body>'
+    echo '<body onload="hideOrShowSlides()">'
 ?>

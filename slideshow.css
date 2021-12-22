@@ -96,10 +96,20 @@
 }
 @media (max-width: 750px) {
     .mySlides {
+        width: 90%;
+        float: none;
+        height: fit-content;
         display: inline-block;
+        zoom: 1;
+        white-space: pre-line;
     }
     .slideshow-container {
-        overflow: scroll;
+        width: 95%;
+        height: fit-content;
+        white-space: nowrap;
+        position: relative;
+        overflow-x: scroll;
+        overflow-y: hidden;
     }
     #home-page-section .desktop {
         display: none;
@@ -108,6 +118,18 @@
     .mySlides #reference2,
     .mySlides #reference3 {
         display: block;
+    }
+    .mySlides .left {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        height: fit-content;
+    }
+    .mySlides .right {
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        height: fit-content;
     }
 }
   
