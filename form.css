@@ -7,12 +7,15 @@
     background-color: #0096F5;
     height: fit-content;
     margin-top: 200px;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     padding-top: 25px;
     padding-bottom: 25px;
     box-shadow: 2px 2px 1px black;
     border: 1px solid #054065;
     border-radius: 10px;
+}
+#login-page h1 {
+    margin-bottom: 50px;
 }
 #user input {
     border: 1px solid #054065;
@@ -27,11 +30,20 @@
     color: #054065;
     border: 1px solid #054065;
 }
-#user #sign-in:hover{
+#user #sign-in:hover {
     border: 2px solid #054065;
     background-color: #054065;
     color: white;
     cursor: pointer;
+}
+#user #sign-in:disabled {
+    opacity: 0.5;
+}
+#user #sign-in:disabled:hover {
+    background-color: white;
+    color: #054065;
+    border: 1px solid #054065;
+    cursor: auto;
 }
 #contact-us {
     margin-top: 50px;
@@ -92,6 +104,20 @@ input:not(:focus):valid ~ .floating-label,
     width: 200px;
     margin-left: 5px;
 }
+@media (max-width: 1300px) {
+    #login-page {
+        max-width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+@media (max-width: 900px) {
+    #login-page {
+        max-width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
 @media (max-width: 750px) {
     .floating-label {
         left: 38%;
@@ -103,5 +129,10 @@ input:not(:focus):valid ~ .floating-label,
         top: -21px;
         bottom: 0px;
         left: 27%;
+    }
+    #login-page {
+        max-width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
     }
 }

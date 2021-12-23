@@ -16,5 +16,6 @@
         <script src="hamburger.js" async></script>
         <script src="resolution-checker.js" async></script>
         <script src="summary.js" async></script>
+        <script src="password-check.js" async></script>
     ';
 ?>
