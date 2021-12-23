@@ -1,7 +1,42 @@
+#login-page {
+    max-width: 25%;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    align-items: center;
+    text-align: center;
+    background-color: #0096F5;
+    height: fit-content;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-shadow: 2px 2px 1px black;
+    border: 1px solid #054065;
+    border-radius: 10px;
+}
+#user input {
+    border: 1px solid #054065;
+}
+#user input:focus {
+    border: 2px solid #054065;
+}
+#user #sign-in {
+    width: 227px;
+    font-weight: bold;
+    background-color: white;
+    color: #054065;
+    border: 1px solid #054065;
+}
+#user #sign-in:hover{
+    border: 2px solid #054065;
+    background-color: #054065;
+    color: white;
+    cursor: pointer;
+}
 #contact-us {
     margin-top: 50px;
 }
-#contact-us input, #contact-us #msg {
+input, #contact-us #msg {
     margin-left: 5px;
     margin-bottom: 6px;
     padding: 12px;
@@ -10,7 +45,7 @@
     border-radius: 6px;
     width: 200px;
 }
-#contact-us input:focus, #contact-us #msg:focus {
+input:focus, #contact-us #msg:focus {
     outline: none !important;
     border: 2px solid #0096F5;
 }
@@ -31,7 +66,7 @@
 input:focus ~ .floating-label,
 input:not(:focus):valid ~ .floating-label,
 #msg:focus ~ .floating-label,
-#msg:not(:focus):valid ~ .floating-label {
+#msg:not(:focus):valid ~ .floating-label  {
     top: -21px;
     bottom: 0px;
     left: 0px;
