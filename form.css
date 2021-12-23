@@ -45,6 +45,10 @@
     border: 1px solid #054065;
     cursor: auto;
 }
+#user .floating-label {
+    top: 14px;
+    left: 130px;
+}
 #contact-us {
     margin-top: 50px;
 }
@@ -110,6 +114,10 @@ input:not(:focus):valid ~ .floating-label,
         margin-left: 30%;
         margin-right: 30%;
     }
+    #user .floating-label {
+        top: 14px;
+        left: 155px;
+    }
 }
 @media (max-width: 900px) {
     #login-page {
@@ -134,5 +142,15 @@ input:not(:focus):valid ~ .floating-label,
         max-width: 95%;
         margin-left: 2.5%;
         margin-right: 2.5%;
+    }
+    #user .floating-label {
+        top: 14px;
+        left: 255px;
+    }
+}
+@media (max-width: 500px) {
+    #user .floating-label {
+        top: 14px;
+        left: 130px;
     }
 }
