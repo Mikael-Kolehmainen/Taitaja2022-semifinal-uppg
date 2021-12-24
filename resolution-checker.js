@@ -4,6 +4,9 @@ window.addEventListener('resize', function(event){
     if (newWidth > 900) {
         changeLinksDisplay()
     }
+    if (newWidth < 750) {
+      //  moveImages()
+    }
     hideOrShowSlides()
 });
 
@@ -17,15 +20,14 @@ function showAllSlides() {
     slides = document.getElementsByClassName('mySlides')
 
     for (var i = 0; i < slides.length; i++) {
-        console.log(slides[i])
         slides[i].style.display = 'inline-block'
     }
 }
 function hideAllSlides() {
     slides = document.getElementsByClassName('mySlides')
 
+    // i = 1 koska eka 'slide' pitää näkyä.
     for (var i = 1; i < slides.length; i++) {
-        console.log(slides[i])
         slides[i].style.display = 'none'
     }
 }
@@ -37,4 +39,11 @@ function hideOrShowSlides() {
     } else if (newWidth > 750) {
         hideAllSlides()
     }
-}
+} /*
+function moveImages() {
+    images = document.getElementsByClassName('slideImg')
+
+    for (var i = 0; i < images.length; i++) {
+        $('#myDiv2').append( $('#myDiv1>p') );
+    }
+} */

@@ -42,7 +42,7 @@
                 <div class="slideshow-container">
                     <!-- Referenssi 1 -->
                     <div class="mySlides" id="reference1">
-                        <div class="left">
+                        <div class="left slideImg">
                             <img src="img/referenssi1.jpg" alt="kuva sillasta">
                         </div>
                         <div class="right">
@@ -54,7 +54,7 @@
                     </div>
                     <!-- Referenssi 2 -->
                     <div class="mySlides" id="reference2">
-                        <div class="left">
+                        <div class="left slideImg">
                             <img src="img/referenssi2.jpg" alt="kuva kaivurista">
                         </div>
                         <div class="right">
@@ -65,7 +65,7 @@
                     </div>
                     <!-- Referenssi 3 -->
                     <div class="mySlides" id="reference3">
-                        <div class="left">
+                        <div class="left slideImg">
                             <img src="img/referenssi3.jpg" alt="kuva talosta">
                         </div>
                         <div class="right">
