@@ -108,6 +108,13 @@ section img {
     width: 100%;
     border: 1px solid black;
 }
+section a {
+    color: #AD4900;
+    text-decoration: none;
+}
+section a:hover {
+    text-decoration: underline;
+}
 article {
     padding: 20px;
     margin-top: 5px;

@@ -2,6 +2,16 @@ section aside {
     width: 40%;
     margin-top: 40px;
 }
+section h2 {
+    margin-left: 10px;
+}
+section h3 {
+    margin-left: 20px;
+}
+.lists li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 article .left, article .right {
     width: 40%;
 }
