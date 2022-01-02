@@ -57,6 +57,11 @@
     top: 14px;
     left: 130px;
 }
+#user .user:focus ~ .floating-label,
+#user .user:not(:focus):valid ~ .floating-label {
+    top: -20px;
+    left: 120px;
+}
 #contact-us {
     margin-top: 50px;
 }

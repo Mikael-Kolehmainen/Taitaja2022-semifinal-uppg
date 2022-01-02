@@ -6,10 +6,10 @@
     </head>
     <?php require 'onload.php'?>
         <?php require 'header.php'?>
+        <div id="feature-img">
+            <h1>Mallisivu</h1>
+        </div>
         <section>
-            <div id="feature-img">
-                <h1>Mallisivu</h1>
-            </div>
             <article>
                 <div class="row">
                     <div class="left">

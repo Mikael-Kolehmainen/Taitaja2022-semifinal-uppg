@@ -15,7 +15,7 @@
             <!-- Yhteydenottolomake -->
             <aside>
                 <h2>Yhteydenottolomake</h2>
-                <form id="contact-us" name="contact-us" action="" method="POST" autocomplete="off">
+                <form id="contact-us" name="contact-us" action="contact.php" method="POST" autocomplete="off">
                     <div class="floating-label-group">
                         <input type="text" id="fname" name="fname" class="form-control" autocomplete="off" required />
                         <label class="floating-label">Etunimi</label>
