@@ -66,6 +66,12 @@
 .active, .dot:hover {
     background-color: #717171;
 }
+#home-page-section .mobile {
+    display: none;
+}
+#home-page-section .desktop {
+    display: block;
+}
 @media (max-width: 1300px) {
     .mySlides .left, .mySlides .right {
         height: 650px;
@@ -111,6 +117,9 @@
         overflow-x: scroll;
         overflow-y: hidden;
     }
+    #home-page-section .mobile {
+        display: block;
+    }
     #home-page-section .desktop {
         display: none;
     }
@@ -120,16 +129,20 @@
         display: block;
     }
     .mySlides .left {
-        width: 95%;
-        margin-left: 2.5%;
-        margin-right: 2.5%;
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
         height: fit-content;
+    }
+    .mySlides .slideImg img {
+        height: 200px;
     }
     .mySlides .right {
         width: 95%;
         margin-left: 2.5%;
         margin-right: 2.5%;
-        height: fit-content;
+        min-height: fit-content;
+        margin-bottom: 275px;
     }
 }
   

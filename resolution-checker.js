@@ -4,9 +4,6 @@ window.addEventListener('resize', function(event){
     if (newWidth > 900) {
         changeLinksDisplay()
     }
-    if (newWidth < 750) {
-      //  moveImages()
-    }
     hideOrShowSlides()
 });
 
@@ -39,11 +36,4 @@ function hideOrShowSlides() {
     } else if (newWidth > 750) {
         hideAllSlides()
     }
-} /*
-function moveImages() {
-    images = document.getElementsByClassName('slideImg')
-
-    for (var i = 0; i < images.length; i++) {
-        $('#myDiv2').append( $('#myDiv1>p') );
-    }
-} */
+}
