@@ -135,14 +135,12 @@
         height: fit-content;
     }
     .mySlides .slideImg img {
-        height: 200px;
+        min-height: fit-content;
     }
     .mySlides .right {
+        height: 100%;
         width: 95%;
         margin-left: 2.5%;
         margin-right: 2.5%;
-        min-height: fit-content;
-        margin-bottom: 275px;
     }
 }
-  
