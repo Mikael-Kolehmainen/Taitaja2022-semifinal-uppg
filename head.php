@@ -1,6 +1,6 @@
 <?php
     echo '
-        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="img/logo/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Stylesheets -->
         <link href="main.css" rel="stylesheet" type="text/css" id="pagestyle">
@@ -10,6 +10,7 @@
         <link href="four-columns.css" rel="stylesheet" type="text/css">
         <link href="form.css" rel="stylesheet" type="text/css">
         <link href="template.css" rel="stylesheet" type="text/css">
+        <link href="print.css" rel="stylesheet" type="text/css">
         <!-- Scripts -->
         <script src="sticky.js" async></script>
         <script src="slideshow.js" async></script>

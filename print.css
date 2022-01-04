@@ -1,0 +1,9 @@
+@media print {
+    .float-container, .hero-background, .hero-text,
+    aside, img {
+        display: none;
+    }
+    .mySlides, .left {
+        display: block;
+    }
+}
