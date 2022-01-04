@@ -45,7 +45,7 @@
                         <div class="left slideImg desktop">
                             <img src="img/referenssi1.jpg" alt="kuva sillasta">
                         </div>
-                        <div class="right">
+                        <div class="right text">
                             <h1>Suurhanke: Helsinki – Tallinna Silta / Valtakunnan Silta Oy</h1>
                             <p>Massiivinen, reippaan punainen Tallinnan silta avattiin liikenteelle tammikuussa 2020. Siltahanke on yksi Suomen ja Viron suurimpia yhteisiä rakennushankkeita. Tähän merkittävään rakennushankkeeseen osallistuivat kaikki suurimmat rakennusyhtiöt ja toimijat Suomesta ja Virosta.  Ruosteinen Rauta Oy: toimitti kaikki sillan kaiteitten terärakenteiden tukevat pultit ja kaapelien suojaputket pääurakoitsija Valtakunnan Sillat Oy:lle. Pultti ja suojaputkitoimitukset saatiin toimitettua aikataulun mukaisesti.</p>
                             <p>Valtakunnan Sillat Oy valitsi Ruosteinen Rauta Oy:n pultti ja suojaputkitoimittajaksi aikaisemman yhteistyön perusteella luottaen, että hankkeen tiukassa aikataulussa pysytään, kun pultit ja suojaputkitoimituksissa on luotettava kumppani.</p>
@@ -60,7 +60,7 @@
                         <div class="left slideImg desktop">
                             <img src="img/referenssi2.jpg" alt="kuva kaivurista">
                         </div>
-                        <div class="right">
+                        <div class="right text">
                             <h1>Konepalvelut vuokraus / Koneline Oy</h1>
                             <p>Koneline Oy tarjoaa maansiirto ja maatyö palveluita rakentajille. Vuonna 2021 KoneLine Oy luopui omista maansiirtokoneistaan ja käyttää urakoissaan Ruosteinen Rauta Oy:n vuokralaitevalikoimaa.</p>
                             <p>”Ruosteinen Rauta Oy” toimittaa meille projekteihin tarvittavia laitteistoja ja koneita. Koneet ja laitteet ovat aina toimivia ja hyvin huollettuja. Siirtyessämme vuokrakoneiden käyttöön, olemme pystyneet tarjoamaan maansiirtotöitä erittäin edulliseen hintaan asiakkaillemme. Vuokrakoneiden käytössä pystymme käyttämään ja saamaan käyttöömme juuri oikean laitteen oikeaan aikaan ja tämä luo liiketoimintaan kustannustehokkuutta. Ruosteinen Rauta on merkittävä kumppanimme, joka mahdollistaa toimintamme joustavuuden. Kannattavuutemme on kasvanut 89% kun siirryimme hyödyntämään Ruosteisen Raudan vuokrakonevalikoimaa toiminnassamme. ” Kertoo toimitusjohtaja Jorma Kontio Koneline Oy:stä. Koneline Oy suositteleekin Ruosteisen Raudan konevalikoimaan pienemmille ja suuremmille työmaille.</p>
@@ -74,7 +74,7 @@
                         <div class="left slideImg desktop">
                             <img src="img/referenssi3.jpg" alt="kuva talosta">
                         </div>
-                        <div class="right">
+                        <div class="right text">
                             <h1>Talonrakentaja Olli Orava</h1>
                             <p>Uniikki koti rakentui Poriin vuonna 2019. Rakentaja Jussi Ahola rakensi unelmiensa kodin hankkien kaikki rakennustarvikkeet Ruosteisen Raudan monipuolisesta valikoimasta. Ahola on 12 metriä korkea moniulotteinen rakennus, oikea taideteos, joka toteutettiin Arkkitehtitoimisto Ainutlaatuinen koti Oy:n suunnitelmien pohjalta.</p>
                             <p>Jussi Ahola kommentoi rakennusprojektiaan seuraavasti: ”Rakentaminen oli helppoa ja nopeaa Ruosteisen Raudan avulla. Monipuolinen valikoima mahdollisti kaikkien tarvikkeiden hankinnan yhdestä ja samasta paikasta, jolloin säästin kustannuksista ja sain aina kokonaisvaltaista palvelua kaikkiin rakentamiseen liittyviin kysymyksiin ja palveluihin liittyen. Suosittelen Ruosteisen Raudan valikoimaa lämpimästi kaikille rakentajille pieniin ja isoihin projekteihin.”</p>
