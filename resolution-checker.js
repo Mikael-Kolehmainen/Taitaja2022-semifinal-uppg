@@ -1,3 +1,6 @@
+window.onload = function() {
+    hideOrShowSlides()
+};
 window.addEventListener('resize', function(event){
     var newWidth = window.innerWidth
     // var newHeight = window.innerHeight
