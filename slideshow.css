@@ -132,10 +132,13 @@
         width: 98%;
         margin-left: 1%;
         margin-right: 1%;
-        height: fit-content;
+        height: 400px;
     }
     .mySlides .slideImg img {
         min-height: fit-content;
+        position: absolute;
+        bottom: 0;
+        width: 87.5%;
     }
     .mySlides .right {
         height: 100%;

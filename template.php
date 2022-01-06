@@ -4,7 +4,7 @@
         <title>Ruosteinen Rauta Oy - Mallisivu</title>
         <?php require 'head.php'?>
     </head>
-    <?php require 'onload.php'?>
+    <body>
         <?php require 'header.php'?>
         <div id="feature-img">
             <h1>Mallisivu</h1>

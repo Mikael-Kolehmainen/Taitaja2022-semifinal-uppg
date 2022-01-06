@@ -10,7 +10,7 @@
                 <h1>Kirjaudu Sisään</h1>
                 <form id="user" name="user" action="user-page.php" method="POST" autocomplete="off">
                     <div class="floating-label-group">
-                        <input type="text" id="username" name="username" class="form-control user" autocomplete="off" required />
+                        <input type="text" id="username" name="username" class="form-control user" autocomplete="off" required/>
                         <label class="floating-label">Käyttäjänimi</label>
                     </div>
                     <div class="floating-label-group">
