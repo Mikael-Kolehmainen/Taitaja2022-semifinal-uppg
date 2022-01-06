@@ -1,5 +1,6 @@
 var oldWidth
 window.onload = function WindowLoad(event) {
+    hideOrShowSlides()
     oldWidth = window.innerWidth
     console.log(oldWidth)
 }
@@ -41,7 +42,7 @@ function hideAllSlides() {
     }
 }
 function hideOrShowSlides() {
-    var newWidth = window.innerWidth;
+    var newWidth = window.innerWidth
 
     if (newWidth < 750) {
         showAllSlides()

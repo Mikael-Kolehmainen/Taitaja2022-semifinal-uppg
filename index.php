@@ -4,8 +4,8 @@
         <title>Ruosteinen Rauta Oy - Etusivu</title>
         <?php require 'head.php'; ?>
     </head>
-    <?php require 'onload.php';
-            require 'header.php'?>
+    <body>
+    <?php require 'header.php'?>
         <video class="hero-background" autoplay loop muted poster="video/poster.jpg">
             <source src="video/background-video.mp4" type="video/mp4">
         </video>
