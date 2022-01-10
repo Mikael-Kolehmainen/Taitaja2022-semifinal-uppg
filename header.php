@@ -4,19 +4,19 @@
     $loginClass = "";
     switch (basename($_SERVER['PHP_SELF'])) {
         case 'index.php':
-            $indexClass = "active";
+            $indexClass = "class=active";
             break;
         case 'template.php':
-            $tempClass = "active";
+            $tempClass = "class=active";
             break;
         case "login.php":
-            $loginClass = "active";
+            $loginClass = "class=active";
             break;
     }
     echo '
         <div class="float-container" id="top">
             <header>
-                <img src="img/logo/Logo light.png" alt="Company logo">
+                <img src="img/logo/Logo_light.png" alt="Company logo">
             </header>
             <nav>
                 <div id="hamburger">
@@ -25,8 +25,8 @@
                     </a>
                 </div>
                 <ul id="myLinks">
-                    <a href="index.php" class='.$indexClass.'><li class='.$indexClass.'>Etusivu</li></a>
-                    <a href="template.php" class='.$tempClass.'><li class='.$tempClass.'>Esimerkkisivu</li></a>
+                    <a href="index.php" '.$indexClass.'><li '.$indexClass.'>Etusivu</li></a>
+                    <a href="template.php" '.$tempClass.'><li '.$tempClass.'>Esimerkkisivu</li></a>
                     <a href="login.php" id="loginBtn"><li>Kirjaudu</li></a>
                 </ul>
             </nav>

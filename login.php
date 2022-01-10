@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<?php require 'html-tag.php' ?>
     <head>
         <title>Ruosteinen Rauta Oy - Etusivu</title>
         <?php require 'head.php'?>

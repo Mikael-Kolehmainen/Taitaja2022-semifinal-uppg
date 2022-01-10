@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<?php require 'html-tag.php' ?>
     <head>
         <title>Ruosteinen Rauta Oy - Etusivu</title>
         <?php require 'head.php'; ?>
@@ -25,7 +25,7 @@
                         <p>Ruosteinen Rauta on Porin Yrittäjien jäsenyritys. Tutustu Porin Yrittäjien toimintaan: </p>
                         <a href="https://www.yrittajat.fi/paikallisyhdistykset/porin-yrittajat/" target="_blank">https://www.yrittajat.fi/paikallisyhdistykset/porin-yrittajat/</a>
                     </div>
-                    <aside class="rightImg"><img src="img/unsplash images/george-pastushok-d0yNnTEjEWY-unsplash.jpg" alt="kuva sahasta"></aside>
+                    <aside class="rightImg"><img src="img/unsplash_images/george-pastushok-d0yNnTEjEWY-unsplash.jpg" alt="kuva sahasta"></aside>
                 </div>
                 <div class="row">
                     <div class="right">
@@ -34,7 +34,7 @@
                         <p>Yrityksen perustaja Rauno Rauta on palvellut asiakkaita vuodesta 1958 ja vuonna 2022 Tuukka Rauta jatkaa yrityksen ohjaksissa Reino Raudan jäädessä eläkkeelle. Tuukka Rauta on toiminut yrityksessä jo vuodesta 2000.  Vuonna 2021 yrityksessämme työskenteli 100 alan ammattilaista palvellen asiakkaitamme rautaisella ammattitaidolla.</p>
                         <p>Yrityksemme ideana on alusta lähtien tarjota rakennus ja metallialan tuotteita ja palveluita edulliseen hintaan. Palveluumme on aina kuulunut ammattitaitoinen opastus ja asiantuntemus, jota asiakkaamme useiden sukupolvien ajan ovat hyödyntäneet projekteissaan. Voimmekin rehellisesti sanoa, että tunnemme alan läpikotaisin ja tämän pitkän kokemuksen tuomalla varmuudella pystymme tarjoamaan asiakkaillemme kaikki rauta ja metallialanpalvelut luotettavasti ja laadukkaasti – jo vuodesta 1958.</p>
                     </div>
-                    <aside class="leftImg"><img src="img/unsplash images/tekton-e6Wr8LaH-Q8-unsplash.jpg" alt="kuva sahasta"></aside>
+                    <aside class="leftImg"><img src="img/unsplash_images/tekton-e6Wr8LaH-Q8-unsplash.jpg"></aside>
                 </div>
             </article>
             <!-- Referenssejä - slideshow.css-->

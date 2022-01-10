@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<?php require 'html-tag.php' ?>
     <head>
         <title>Ruosteinen Rauta Oy - Mallisivu</title>
         <?php require 'head.php'?>
@@ -21,7 +21,7 @@
                         <p>Suspendisse ultrices leo at lorem convallis faucibus. Sed arcu metus, viverra id pellentesque non, scelerisque a lacus. In laoreet arcu ut enim viverra commodo. Donec vulputate, ex sit amet pellentesque tincidunt, dolor neque fringilla mi, sed tincidunt est massa porta velit. Etiam nec risus lacus. Proin lacinia metus mauris, eu venenatis lorem facilisis ac.</p>
                         <a href="https://www.lipsum.com/" target="_blank">https://www.lipsum.com/</a>
                     </div>
-                    <aside class="rightImg"><img src="img/unsplash images/neonbrand-60krlMMeWxU-unsplash.jpg" alt="kuva sahasta"></aside>
+                    <aside class="rightImg"><img src="img/unsplash_images/neonbrand-60krlMMeWxU-unsplash.jpg" alt="kuva sahasta"></aside>
                 </div>
                 <div class="row">
                     <div class="right">
@@ -32,7 +32,7 @@
                         <h3>Heading 3</h3>
                         <p>Suspendisse ultrices leo at lorem convallis faucibus. Sed arcu metus, viverra id pellentesque non, scelerisque a lacus. In laoreet arcu ut enim viverra commodo. Donec vulputate, ex sit amet pellentesque tincidunt, dolor neque fringilla mi, sed tincidunt est massa porta velit. Etiam nec risus lacus. Proin lacinia metus mauris, eu venenatis lorem facilisis ac.</p>
                     </div>
-                    <aside class="leftImg"><img src="img/unsplash images/neonbrand-tKvp2XBx4NE-unsplash.jpg" alt="kuva sahasta"></aside>
+                    <aside class="leftImg"><img src="img/unsplash_images/neonbrand-tKvp2XBx4NE-unsplash.jpg" alt="kuva sahasta"></aside>
                 </div>
             </article>
             <article class="lists">
@@ -46,7 +46,7 @@
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam libero lorem, blandit eget convallis ut, interdum at odio. </li>
                         </ul>
                     </div>
-                    <aside class="rightImg"><img src="img/unsplash images/matt-artz-pH6wLT6TVFc-unsplash.jpg" alt="kuva sahasta"></aside>
+                    <aside class="rightImg"><img src="img/unsplash_images/matt-artz-pH6wLT6TVFc-unsplash.jpg" alt="kuva sahasta"></aside>
                 </div>
                 <div class="row">
                     <div class="right">
@@ -58,7 +58,7 @@
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam libero lorem, blandit eget convallis ut, interdum at odio. </li>
                         </ol>
                     </div>
-                    <aside class="leftImg"><img src="img/unsplash images/greg-rosenke-xoxnfVIE7Qw-unsplash.jpg" alt="kuva sahasta"></aside>
+                    <aside class="leftImg"><img src="img/unsplash_images/greg-rosenke-xoxnfVIE7Qw-unsplash.jpg" alt="kuva sahasta"></aside>
                 </div>
             </article>
         </section>

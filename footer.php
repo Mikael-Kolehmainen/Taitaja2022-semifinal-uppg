@@ -4,7 +4,7 @@
             <h1 style="text-align: center">Ota yhteyttä</h1>
             <!-- Yhteystiedot -->
             <div id="rest">
-                <img src="img/logo/Logo light.png" alt="Company logo"><br>
+                <img src="img/logo/Logo_light.png" alt="Company logo"><br>
                 <img id="yrittajat" src="img/SY_satakunta_RGB_musta.jpg" alt="Yrittäjät">
                 <h2>Ruosteinen Rauta Oy</h2>
                 <p>Urheilutie 1,</p>
