@@ -2,6 +2,7 @@
 <?php require 'html-tag.php' ?>
     <head>
         <title>Ruosteinen Rauta Oy - Kirjaudu Sisään</title>
+        <meta name="robots" content="index, follow">
         <?php require 'head.php'?>
     </head>
     <body id="background">

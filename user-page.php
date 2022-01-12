@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Ruosteinen Rauta Oy - Käyttäjäsivu</title>
+        <meta name="robots" content="noindex">
         <?php require 'head.php' ?>
     </head>
     <body>

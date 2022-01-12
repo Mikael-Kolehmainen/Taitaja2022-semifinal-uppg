@@ -1,7 +1,11 @@
 <?php
     echo '
         <link rel="icon" type="image/png" href="img/logo/favicon.png">
+        <!-- Meta tags -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Jos tulee tarvetta -->
+            <meta name="description" content="">
+        
         <!-- Stylesheets -->
         <link href="main.css" rel="stylesheet" type="text/css" id="pagestyle">
         <link href="hero.css" rel="stylesheet" type="text/css">
