@@ -54,13 +54,13 @@
                         }
                     }
                 } // Jos on aiemmin kirjautunut sisään ja eväste vielä voimassa.
-            } else if (isset($_COOKIE[$username])) {
+            } else if (isset($_COOKIE['username'])) {
                 echo "
                 <section style='margin-top: 50px;'>
                     <article>
                         <div class='row'>
                             <div class='left'>
-                                <h1>Tervetuloa ".$_COOKIE[$username]."</h1>
+                                <h1>Tervetuloa ".$_COOKIE['username']."</h1>
                             </div>
                         </div>
                     </article>
