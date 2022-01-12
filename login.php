@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php require 'html-tag.php' ?>
     <head>
-        <title>Ruosteinen Rauta Oy - Etusivu</title>
+        <title>Ruosteinen Rauta Oy - Kirjaudu Sisään</title>
         <?php require 'head.php'?>
     </head>
     <body id="background">

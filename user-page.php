@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Ruosteinen Rauta Oy - Käyttäjäsivu</title>
         <?php require 'head.php' ?>
     </head>
     <body>
