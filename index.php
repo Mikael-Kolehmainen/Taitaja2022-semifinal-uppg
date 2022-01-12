@@ -35,7 +35,7 @@
                         <p>Yrityksen perustaja Rauno Rauta on palvellut asiakkaita vuodesta 1958 ja vuonna 2022 Tuukka Rauta jatkaa yrityksen ohjaksissa Reino Raudan jäädessä eläkkeelle. Tuukka Rauta on toiminut yrityksessä jo vuodesta 2000.  Vuonna 2021 yrityksessämme työskenteli 100 alan ammattilaista palvellen asiakkaitamme rautaisella ammattitaidolla.</p>
                         <p>Yrityksemme ideana on alusta lähtien tarjota rakennus ja metallialan tuotteita ja palveluita edulliseen hintaan. Palveluumme on aina kuulunut ammattitaitoinen opastus ja asiantuntemus, jota asiakkaamme useiden sukupolvien ajan ovat hyödyntäneet projekteissaan. Voimmekin rehellisesti sanoa, että tunnemme alan läpikotaisin ja tämän pitkän kokemuksen tuomalla varmuudella pystymme tarjoamaan asiakkaillemme kaikki rauta ja metallialanpalvelut luotettavasti ja laadukkaasti – jo vuodesta 1958.</p>
                     </div>
-                    <aside class="leftImg"><img src="img/unsplash_images/tekton-e6Wr8LaH-Q8-unsplash.jpg"></aside>
+                    <aside class="leftImg"><img src="img/unsplash_images/tekton-e6Wr8LaH-Q8-unsplash.jpg" alt="kuva työkaluista"></aside>
                 </div>
             </article>
             <!-- Referenssejä - slideshow.css-->
