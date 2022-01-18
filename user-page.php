@@ -31,6 +31,7 @@
                                         <div class='row'>
                                             <div class='left'>
                                                 <h1>Tervetuloa ".$username."</h1>
+                                                <p>KOMMENTI: jos käyttäjä ei käytä KIRJAUDU ULOS painiketta niin tälle sivustolle pääse takaisin kirjautumatta 30-minuutin aikana.</p>
                                             </div>
                                         </div>
                                     </article>
@@ -63,6 +64,7 @@
                         <div class='row'>
                             <div class='left'>
                                 <h1>Tervetuloa ".$_COOKIE['username']."</h1>
+                                <p>KOMMENTI: jos käyttäjä ei käytä KIRJAUDU ULOS painiketta niin tälle sivustolle pääse takaisin kirjautumatta 30-minuutin aikana.</p>
                             </div>
                         </div>
                     </article>
