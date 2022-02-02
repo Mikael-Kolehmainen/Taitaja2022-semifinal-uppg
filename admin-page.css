@@ -1,0 +1,46 @@
+#users, #welcometexts {
+    border: 1px solid black;
+}
+#users td, #welcometexts td {
+    padding: 5px;
+}
+#adminPage a {
+    cursor: pointer;
+}
+
+#adminPage form {
+    margin-left: 20px;
+}
+#adminPage input {
+    width: auto;
+    padding: 6px;
+}
+#adminPage input[type=text] {
+    width: 100px;
+}
+#adminPage input[type=submit] {
+    width: 50px;
+    font-weight: bold;
+    background-color: white;
+    color: #0096F5;
+    border: 1px solid #0096F5;
+}
+#adminPage input[type=submit]:hover {
+    border: 2px solid #0096F5;
+    background-color: #0096F5;
+    color: white;
+    cursor: pointer;
+}
+#welcomeinput {
+    resize: vertical;
+    width: 300px;
+    margin-left: 5px;
+    margin-bottom: 6px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #0096F5;
+    border-radius: 6px;
+}
+#adminPage #changebtn {
+    width: 100px;
+}

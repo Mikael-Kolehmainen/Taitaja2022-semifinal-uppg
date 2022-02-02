@@ -10,5 +10,4 @@
       
         return $randomString;
     }
-    echo getRandomString(5), password_hash('taitaja2022', PASSWORD_DEFAULT);
 ?>

@@ -11,7 +11,21 @@
             <source src="video/background-video.mp4" type="video/mp4">
         </video>
             <div class="hero-text">
-                <h1>Oikein rakentaminen onnistuu hyvillä ratkaisuilla - Tervetuloa asioimaan Ruosteiseen Rautaan!</h1>
+                <?php
+                    require 'connection.php';
+
+                    $sql = "SELECT id, tervehdys, nykyinen FROM tervehdysteksti";
+                    $result = mysqli_query($conn, $sql);
+
+                    if (mysqli_num_rows($result) > 0) {
+                        for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+                            $row = mysqli_fetch_assoc($result);
+                            if ($row['nykyinen'] == 1) {
+                                echo '<h1>'.$row["tervehdys"].'</h1>';
+                            }
+                        }
+                    }
+                ?>
                 <input type="button" value="Lue lisää" id="read-more" onclick="smoothScroll(document.getElementById('services'))"/>
             </div>
         <section>

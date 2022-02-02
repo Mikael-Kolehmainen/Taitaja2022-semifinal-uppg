@@ -15,6 +15,7 @@
         <link href="form.css" rel="stylesheet" type="text/css">
         <link href="template.css" rel="stylesheet" type="text/css">
         <link href="print.css" rel="stylesheet" type="text/css">
+        <link href="admin-page.css" rel="stylesheet" type="text/css">
         <!-- Scripts -->
         <script src="sticky.js" async></script>
         <script src="slideshow.js" async></script>
