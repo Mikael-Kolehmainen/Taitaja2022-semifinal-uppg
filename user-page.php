@@ -51,30 +51,30 @@
                                     <tr>
                                         <td style='font-weight: bold'>Tervehdystekstit</td>
                                     </tr>";
+                                    ?>
+                            <script>
+                                function changeWelcome(currentText) {
+                                    if (confirm('Oletteko varma että haluatte vaihtaa tervehdystekstin kotisivulla?') == true) {
+                                        window.location.href = 'change-welcome.php?currenttext=' + currentText;
+                                    }
+                                }
+                                function removeWelcome(currentText) {
+                                    if (confirm('Oletteko varma että haluatte poistaa tervehdystekstin tietokannasta?') == true) {
+                                        window.location.href = 'remove-welcome.php?currenttext=' + currentText;
+                                    }
+                                }
+                            </script>
+                            <?php
                                 for ($i = 0; $i < count($welcometexts); $i++) {
                                     echo "<tr>
                                             <td>
                                                 $welcometexts[$i]
                                             </td>
                                             <td>
-                                                <script>
-                                                    function changeWelcome() {
-                                                        if (confirm('Oletteko varma että haluatte vaihtaa tervehdystekstin kotisivulla?') == true) {
-                                                            window.location.href = 'change-welcome.php?currenttext=$welcometexts[$i]';
-                                                        }
-                                                    }
-                                                </script>
-                                                <a onclick='changeWelcome()'>Vaihda tekstiin</a>
+                                                <a onclick='changeWelcome(\"$welcometexts[$i]\")'>Vaihda tekstiin</a>
                                             </td>
                                             <td>
-                                                <script>
-                                                    function removeWelcome() {
-                                                        if (confirm('Oletteko varma että haluatte poistaa tervehdystekstin tietokannasta?') == true) {
-                                                            window.location.href = 'remove-welcome.php?currenttext=$welcometexts[$i]';
-                                                        }
-                                                    }
-                                                </script>
-                                                <a onclick='removeWelcome()'>Poista teksti</a>
+                                                <a onclick='removeWelcome(\"$welcometexts[$i]\")'>Poista teksti</a>
                                             </td>
                                         </tr>";
                                 }
