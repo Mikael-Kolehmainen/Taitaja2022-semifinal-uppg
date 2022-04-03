@@ -109,13 +109,13 @@
                 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["contentAmount"])) {
                     echo   "
                             <p>Sisältöpaikkaa: {$_POST['contentAmount']}</p>
-                            <form action='' autocomplete='off' method='POST'>
+                            <form action='add-page.php' autocomplete='off' method='POST'>
                                 <label for='sitename'>Sivunimi:</label>
                                 <input type='text' name='sitename' autocomplete='off' required><br>
                                 <label for='sitetitle'>Sivun otsikko:</label>
                                 <input type='text' name='sitetitle' autocomplete='off' required><br>
                                 <label for='siteimage'>Sivun teemakuva:</label>
-                                <input type='file' accept='image/png, image/jpeg' name='siteimage' autcomplete='off' required><br>";
+                                <input type='file' accept='image/png, image/jpeg' name='siteimage' autcomplete='off'><br>";
                             for ($i = 1; $i <= $_POST['contentAmount']; $i++) {
                                 echo "
                                     <h5>Sisältöpaikka $i</h5>
@@ -124,7 +124,7 @@
                                     <label for='subtext'>Teksti: </label><br>
                                     <textarea name='subtext$i' id='welcomeinput' autocomplete='off' required></textarea><br>
                                     <label for='subimage'>Sisältöpaikan kuva:</label>
-                                    <input type='file' accept='image/png, image/jpeg' name='subimage$i' autocomplete='off' required><br>
+                                    <input type='file' accept='image/png, image/jpeg' name='subimage$i' autocomplete='off'><br>
                                 ";
                             }
                     echo   "
