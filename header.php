@@ -25,13 +25,12 @@
                     </a>
                 </div>
                 <ul id="myLinks">
-                    <a href="index.php" '.$indexClass.'><li '.$indexClass.'>Etusivu</li></a>
-                    <a href="template.php" '.$tempClass.'><li '.$tempClass.'>Esimerkkisivu</li></a>';
-    if (strpos($_SERVER['REQUEST_URI'], '/user-page.php') == true) {
-        echo '      <a href="remove-cookie.php" id="loginBtn" style="background-color: #743000"><li>Kirjaudu Ulos</li></a>';
-    } else {
-        echo '      <a href="login.php" id="loginBtn"><li>Kirjaudu</li></a>';
-    }
+                    <a href="index.php" '.$indexClass.'><li '.$indexClass.'>Etusivu</li></a>';
+                    if (strpos($_SERVER['REQUEST_URI'], '/user-page.php') == true) {
+                        echo '<a href="remove-cookie.php" id="loginBtn" style="background-color: #743000"><li>Kirjaudu Ulos</li></a>';
+                    } else {
+                        echo '<a href="login.php" id="loginBtn"><li>Kirjaudu</li></a>';
+                    }
     echo '
                 </ul>
             </nav>

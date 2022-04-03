@@ -107,6 +107,8 @@
                                 <input type='submit' value='Vahvista' id='changebtn'>
                             </form>";
                 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["contentAmount"])) {
+                    session_start();
+                    $_SESSION['contentAmount'] = $_POST['contentAmount'];
                     echo   "
                             <p>Sisältöpaikkaa: {$_POST['contentAmount']}</p>
                             <form action='add-page.php' autocomplete='off' method='POST'>
