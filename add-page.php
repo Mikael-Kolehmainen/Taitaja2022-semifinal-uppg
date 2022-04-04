@@ -7,12 +7,29 @@
         if (mysqli_num_rows($result) > 0) {
             for ($i = 0; $i < mysqli_num_rows($result); $i++) {
                 $row = mysqli_fetch_assoc($result);
+                $j = $i + 1;
                 // Checks if sitename is available
                 if ($_POST['sitename'] == $row['nimi']
                     || $_POST['sitename'] == $row['nimiurl']) {
                         $alreadyInDb = true;
                         echo "<script>
                         alert('Sivunimi on jo olemassa');
+                        window.location.href = 'user-page.php';
+                        </script>"; 
+                }
+            }
+        }
+        $sql = "SELECT alaotsikko FROM sisalto";
+        $result = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($result) > 0) {
+            for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+                $row = mysqli_fetch_assoc($result);
+                $j = $i + 1;
+                // Checks if subtitle is available
+                if ($_POST["subtitle$j"] == $row['alaotsikko']) {
+                    $alreadyInDb = true;
+                    echo "<script>
+                        alert('Alaotsikko on jo olemassa');
                         window.location.href = 'user-page.php';
                         </script>"; 
                 }
@@ -26,20 +43,49 @@
             // Save data to database
             require 'connection.php';
             session_start();
+            $amountOfContents = $_SESSION['contentAmount'];
 
+            // Send content to database
+            for ($i = 1; $i <= $amountOfContents; $i++) {
+
+                $subTitle = $_POST["subtitle$i"];
+                $subText = $_POST["subtext$i"];
+                $subImage = "img/unsplash_images/".$_POST["subimage$i"];
+
+                $contentOfPage = "INSERT INTO sisalto (alaotsikko, teksti, kuva)
+                                VALUES ('$subTitle', '$subText', '$subImage')";
+                mysqli_query($conn, $contentOfPage);
+            }
+
+            // Get the IDs of the content rows in database
+            $IDs = "";
+            $getIDs = "SELECT id, alaotsikko FROM sisalto";
+            $result = mysqli_query($conn, $getIDs);
+            if (mysqli_num_rows($result) > 0) {
+                for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+                    $row = mysqli_fetch_assoc($result);
+                    $j = $i + 1;
+                    // If the subtitles are equal then save the ID of that row
+                    if ($row['alaotsikko'] == $_POST["subtitle$j"]) {
+                        $IDs .= $row['id'].";";
+                    }
+                }
+            }
+
+            // Send general site data to database
             $siteName = $_POST['sitename'];
             $siteTitle = $_POST['sitetitle'];
             $siteImage = 'img/unsplash_images/'.$_POST['siteimage'];
-            $contentIDs = $_SESSION['contentAmount'];
             
-            $sql = "INSERT INTO sivut (nimi, nimiurl, otsikko, teemakuva, sisalto) 
+            $page = "INSERT INTO sivut (nimi, nimiurl, otsikko, teemakuva, sisalto) 
                         VALUES ('$siteName', '$myFile', '$siteTitle', 
-                        '$siteImage', '$contentIDs')";
-            mysqli_query($conn, $sql);
+                        '$siteImage', '$IDs')";
+            mysqli_query($conn, $page);
 
-            // Insert alaotsikko, tekstit, kuvat to sisalto database
             // Save the ids of rows to sivut db in format ID;ID;ID;
             // For loop as below with the ids, get data from sisalto db and for loop how many ids
+
+            // Split the varchar of ids in to an array of ids so it can be checked in for loop
 
             // Write html to html file
             $content = '
@@ -55,8 +101,7 @@
                         for ($i = 0; $i < mysqli_num_rows($getData); $i++) {
                             $row = mysqli_fetch_assoc($getData);
                             if ($siteName == $row["nimi"]) {
-                ?>
-                                <?php require "html-tag.php" ?>
+                                require "html-tag.php"    ?>
                                     <head>
                                         <?php echo "<title>Ruosteinen Rauta Oy - {$row["nimi"]}</title>"; ?>
                                         <meta name="robots" content="index, follow">
@@ -69,6 +114,16 @@
                                         </div>
                                         <section>
                 <?php
+                                $sql2 = "SELECT id, alaotsikko, teksti, kuva FROM sisalto";
+                                $getContent = mysqli_query($conn, $sql2);
+                                if (mysqli_num_rows($getContent) > 0) {
+                                    for ($j = 0; $j < mysqli_num_rows($getContent); $j++) {
+                                        $row = mysqli_fetch_assoc($getContent);
+                                        if ($row["id"] == ) {
+                                            
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

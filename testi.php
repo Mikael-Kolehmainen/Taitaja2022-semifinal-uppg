@@ -18,7 +18,7 @@
                                     </head>
                                     <body>
                                         <?php require "header.php"?>
-                                        <div id="feature-img" style="background-image: url(<? php echo $row["teemakuva"]; ?>)">
+                                        <div id="feature-img" style="background-image: url(<?php echo $row["teemakuva"]; ?>)">
                                             <?php echo "<h1>{$row["otsikko"]}</h1>" ?>
                                         </div>
                                         <section>
@@ -31,10 +31,20 @@
                             <article>
                                 <div class='row'>
                                     <div class='left'>
-                                        <h1>esgfeg</h1>
-                                        <p>agaeeggge</p>
+                                        <h1>fafafea</h1>
+                                        <p>aefaefeaf</p>
                                     </div>
-                                    <aside class='rightImg'><img src='img/unsplash_images/tekton-e6Wr8LaH-Q8-unsplash.jpg' alt=''></aside>
+                                    <aside class='rightImg'><img src='img/unsplash_images/neonbrand-tKvp2XBx4NE-unsplash.jpg' alt=''></aside>
+                                </div>
+                            </article>
+                    
+                            <article>
+                                <div class='row'>
+                                    <div class='right'>
+                                        <h1>fefetgg</h1>
+                                        <p>eggegseg</p>
+                                    </div>
+                                    <aside class='leftImg'><img src='img/unsplash_images/konstantin-evdokimov-JALUvPLUde8-unsplash.jpg' alt=''></aside>
                                 </div>
                             </article>
                     
