@@ -64,7 +64,7 @@
                                     </head>
                                     <body>
                                         <?php require "header.php"?>
-                                        <div id="feature-img" style="background-image: url(<? php echo $row["teemakuva"]; ?>)">
+                                        <div id="feature-img" style="background-image: url(<?php echo $row["teemakuva"]; ?>)">
                                             <?php echo "<h1>{$row["otsikko"]}</h1>" ?>
                                         </div>
                                         <section>
