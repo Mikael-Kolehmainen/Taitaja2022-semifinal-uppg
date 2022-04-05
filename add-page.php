@@ -82,11 +82,6 @@
                         '$siteImage', '$IDs')";
             mysqli_query($conn, $page);
 
-            // Save the ids of rows to sivut db in format ID;ID;ID;
-            // For loop as below with the ids, get data from sisalto db and for loop how many ids
-
-            // Split the varchar of ids in to an array of ids so it can be checked in for loop
-
             // Write html to html file
             $content = '
                 <!DOCTYPE html>
