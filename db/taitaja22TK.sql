@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 04, 2022 at 12:02 PM
+-- Generation Time: Apr 05, 2022 at 06:42 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -51,9 +51,18 @@ INSERT INTO `kayttajat` (`id`, `kayttajanimi`, `salasana`, `rooli`) VALUES
 CREATE TABLE `sisalto` (
   `id` int(4) NOT NULL,
   `alaotsikko` varchar(255) NOT NULL,
-  `tekstit` varchar(255) NOT NULL,
-  `kuvat` varchar(255) NOT NULL
+  `teksti` varchar(255) NOT NULL,
+  `kuva` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sisalto`
+--
+
+INSERT INTO `sisalto` (`id`, `alaotsikko`, `teksti`, `kuva`) VALUES
+(28, 'tafaaf', 'afafaf', 'img/unsplash_images/neonbrand-60krlMMeWxU-unsplash.jpg'),
+(29, 'aegg', 'egegaegagafa', 'img/unsplash_images/pavel-neznanov-w95Fb7EEcjE-unsplash.jpg'),
+(34, 'EDDIE HALL', 'ldöaldlöada', 'img/unsplash_images/testi2_EDDIE HALL.jpg');
 
 -- --------------------------------------------------------
 
@@ -67,15 +76,16 @@ CREATE TABLE `sivut` (
   `nimiurl` varchar(255) NOT NULL,
   `otsikko` varchar(255) NOT NULL,
   `teemakuva` varchar(255) NOT NULL,
-  `sisalto` varchar(255) NOT NULL
+  `sisalto_id` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `sivut`
 --
 
-INSERT INTO `sivut` (`id`, `nimi`, `nimiurl`, `otsikko`, `teemakuva`, `sisalto`) VALUES
-(17, 'testi', 'testi.php', 'testi', 'img/unsplash_images/george-pastushok-d0yNnTEjEWY-unsplash.jpg', '1');
+INSERT INTO `sivut` (`id`, `nimi`, `nimiurl`, `otsikko`, `teemakuva`, `sisalto_id`) VALUES
+(27, 'testi', 'testi.php', 'testi', 'img/unsplash_images/markus-spiske-cjOAigK9xo0-unsplash.jpg', '28;29;'),
+(43, 'testi2', 'testi2.php', 'testi2', 'img/unsplash_images/', '34;');
 
 -- --------------------------------------------------------
 
@@ -138,13 +148,13 @@ ALTER TABLE `kayttajat`
 -- AUTO_INCREMENT for table `sisalto`
 --
 ALTER TABLE `sisalto`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `sivut`
 --
 ALTER TABLE `sivut`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `tervehdysteksti`
