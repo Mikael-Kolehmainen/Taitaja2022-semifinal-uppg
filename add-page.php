@@ -4,10 +4,11 @@
         $sql = "SELECT nimi, nimiurl FROM sivut";
         $result = mysqli_query($conn, $sql);
         $alreadyInDb = false;
+        session_start();
+        $amountOfContents = $_SESSION['contentAmount'];
         if (mysqli_num_rows($result) > 0) {
             for ($i = 0; $i < mysqli_num_rows($result); $i++) {
                 $row = mysqli_fetch_assoc($result);
-                $j = $i + 1;
                 // Checks if sitename is available
                 if ($_POST['sitename'] == $row['nimi']
                     || $_POST['sitename'] == $row['nimiurl']) {
@@ -24,14 +25,15 @@
         if (mysqli_num_rows($result) > 0) {
             for ($i = 0; $i < mysqli_num_rows($result); $i++) {
                 $row = mysqli_fetch_assoc($result);
-                $j = $i + 1;
                 // Checks if subtitle is available
-                if ($_POST["subtitle$j"] == $row['alaotsikko']) {
-                    $alreadyInDb = true;
-                    echo "<script>
-                        alert('Alaotsikko on jo olemassa');
-                        window.location.href = 'user-page.php';
-                        </script>"; 
+                for ($j = 1; $j <= $amountOfContents; $j++) {
+                    if ($_POST["subtitle$j"] == $row['alaotsikko']) {
+                        $alreadyInDb = true;
+                        echo "<script>
+                            alert('Alaotsikko on jo olemassa');
+                            window.location.href = 'user-page.php';
+                            </script>"; 
+                    }
                 }
             }
         }
@@ -42,19 +44,21 @@
             $fh = fopen($myFile, "w") or exit("Error creation");
             // Save data to database
             require 'connection.php';
-            session_start();
-            $amountOfContents = $_SESSION['contentAmount'];
 
             // Send content to database
             for ($i = 1; $i <= $amountOfContents; $i++) {
 
                 $subTitle = $_POST["subtitle$i"];
                 $subText = $_POST["subtext$i"];
-                $subImage = "img/unsplash_images/".$_POST["subimage$i"];
+                $subImageExt = pathinfo($_FILES["subimage$i"]["name"], PATHINFO_EXTENSION);
+                $subImagePath = "img/unsplash_images/".$sitename_url."_".$_POST["subtitle$i"].".".$subImageExt;
 
-                $contentOfPage = "INSERT INTO sisalto (alaotsikko, teksti, kuva)
-                                VALUES ('$subTitle', '$subText', '$subImage')";
-                mysqli_query($conn, $contentOfPage);
+                // Save the image to project folder
+                if (move_uploaded_file($_FILES["subimage$i"]["tmp_name"], $subImagePath)) {
+                    $contentOfPage = "INSERT INTO sisalto (alaotsikko, teksti, kuva)
+                                    VALUES ('$subTitle', '$subText', '$subImagePath')";
+                    mysqli_query($conn, $contentOfPage);
+                }
             }
 
             // Get the IDs of the content rows in database
@@ -66,8 +70,10 @@
                     $row = mysqli_fetch_assoc($result);
                     $j = $i + 1;
                     // If the subtitles are equal then save the ID of that row
-                    if ($row['alaotsikko'] == $_POST["subtitle$j"]) {
-                        $IDs .= $row['id'].";";
+                    for ($j = 1; $j <= $amountOfContents; $j++) {
+                        if ($row['alaotsikko'] == $_POST["subtitle$j"]) {
+                            $IDs .= $row['id'].";";
+                        }
                     }
                 }
             }
@@ -76,6 +82,8 @@
             $siteName = $_POST['sitename'];
             $siteTitle = $_POST['sitetitle'];
             $siteImage = 'img/unsplash_images/'.$_POST['siteimage'];
+
+            // download uploaded image WRITE CODE HERE
             
             $page = "INSERT INTO sivut (nimi, nimiurl, otsikko, teemakuva, sisalto_id) 
                         VALUES ('$siteName', '$myFile', '$siteTitle', 
@@ -162,7 +170,7 @@
             fwrite($fh, $content);
             fclose($fh);
 
-            echo "<script>
+             echo "<script>
                         alert('Siirry uudelle sivulle.');
                         window.location.href = '$myFile';
                         </script>";

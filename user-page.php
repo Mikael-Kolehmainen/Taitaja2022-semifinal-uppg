@@ -111,7 +111,7 @@
                     $_SESSION['contentAmount'] = $_POST['contentAmount'];
                     echo   "
                             <p>Sisältöpaikkaa: {$_POST['contentAmount']}</p>
-                            <form action='add-page.php' autocomplete='off' method='POST'>
+                            <form action='add-page.php' autocomplete='off' method='POST' enctype='multipart/form-data'>
                                 <label for='sitename'>Sivunimi:</label>
                                 <input type='text' name='sitename' autocomplete='off' required><br>
                                 <label for='sitetitle'>Sivun otsikko:</label>
