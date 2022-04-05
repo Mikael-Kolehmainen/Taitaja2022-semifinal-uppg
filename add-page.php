@@ -77,7 +77,7 @@
             $siteTitle = $_POST['sitetitle'];
             $siteImage = 'img/unsplash_images/'.$_POST['siteimage'];
             
-            $page = "INSERT INTO sivut (nimi, nimiurl, otsikko, teemakuva, sisalto) 
+            $page = "INSERT INTO sivut (nimi, nimiurl, otsikko, teemakuva, sisalto_id) 
                         VALUES ('$siteName', '$myFile', '$siteTitle', 
                         '$siteImage', '$IDs')";
             mysqli_query($conn, $page);
@@ -95,7 +95,7 @@
             $content .= "'$siteName';";
             $content .= '
                     require "connection.php";
-                    $sql = "SELECT id, nimi, nimiurl, otsikko, teemakuva, sisalto FROM sivut";
+                    $sql = "SELECT id, nimi, nimiurl, otsikko, teemakuva, sisalto_id FROM sivut";
                     $getData = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($getData) > 0) {
                         for ($i = 0; $i < mysqli_num_rows($getData); $i++) {
@@ -114,13 +114,42 @@
                                         </div>
                                         <section>
                 <?php
+                                $IDs = explode(";", $row["sisalto_id"]);
+                                $rowIndex = 0;
                                 $sql2 = "SELECT id, alaotsikko, teksti, kuva FROM sisalto";
                                 $getContent = mysqli_query($conn, $sql2);
                                 if (mysqli_num_rows($getContent) > 0) {
                                     for ($j = 0; $j < mysqli_num_rows($getContent); $j++) {
-                                        $row = mysqli_fetch_assoc($getContent);
-                                        if ($row["id"] == ) {
-                                            
+                                        $row2 = mysqli_fetch_assoc($getContent);
+                                        for ($k = 0; $k < count($IDs); $k++) {
+                                            if ($row2["id"] == $IDs[$k]) {
+                                                $rowIndex = $rowIndex + 1;
+                                                if ($rowIndex % 2 != 0 || $rowIndex == 1) {
+                                                    echo "
+                                                        <article>
+                                                            <div class=\'row\'>
+                                                                <div class=\'left\'>
+                                                                    <h1>{$row2["alaotsikko"]}</h1>
+                                                                    <p>{$row2["teksti"]}</p>
+                                                                </div>
+                                                                <aside class=\'rightImg\'><img src={$row2[\'kuva\']} alt=\'\'></aside>
+                                                            </div>
+                                                        </article>
+                                                    ";
+                                                } else {
+                                                    echo "
+                                                        <article>
+                                                            <div class=\'row\'>
+                                                                <div class=\'right\'>
+                                                                    <h1>{$row2["alaotsikko"]}</h1>
+                                                                    <p>{$row2["teksti"]}</p>
+                                                                </div>
+                                                                <aside class=\'leftImg\'><img src={$row2[\'kuva\']} alt=\'\'></aside>
+                                                            </div>
+                                                        </article>
+                                                    ";
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -129,36 +158,6 @@
                     }
                 ?>
             ';
-            for ($i = 1; $i <= $_SESSION['contentAmount']; $i++) {
-                $subtitle = $_POST["subtitle$i"];
-                $subtext = $_POST["subtext$i"];
-                $subimage = "img/unsplash_images/".$_POST["subimage$i"];
-                if ($i % 2 != 0 || $i == 1) {
-                    $content .= "
-                            <article>
-                                <div class='row'>
-                                    <div class='left'>
-                                        <h1>{$subtitle}</h1>
-                                        <p>{$subtext}</p>
-                                    </div>
-                                    <aside class='rightImg'><img src='$subimage' alt=''></aside>
-                                </div>
-                            </article>
-                    ";
-                } else {
-                    $content .= "
-                            <article>
-                                <div class='row'>
-                                    <div class='right'>
-                                        <h1>{$subtitle}</h1>
-                                        <p>{$subtext}</p>
-                                    </div>
-                                    <aside class='leftImg'><img src='$subimage' alt=''></aside>
-                                </div>
-                            </article>
-                    ";
-                }
-            }
             $content .= "
                         </section>
                         <?php require 'footer.php'?>
@@ -168,10 +167,10 @@
             fwrite($fh, $content);
             fclose($fh);
 
-            /* echo "<script>
+            echo "<script>
                         alert('Siirry uudelle sivulle.');
                         window.location.href = '$myFile';
-                        </script>"; */
+                        </script>";
         }
     } else {
         echo "<script>
