@@ -120,6 +120,18 @@
                         <tr>";
                 }
                 echo   "</table>
+                        <div style='display: ";
+                        if (isset($_REQUEST['site'])) {
+                            echo "block;";
+                        } else {
+                            echo "none;";
+                        }
+                echo "  '>
+                            <h3>Editoi {$_REQUEST['site']}</h3>
+                            <form action='edit-page.php' autocomplete='off' method='POST'>
+                            
+                            </form>
+                        </div>
                         <h3>Lisää sivu</h3>
                             <form action='user-page.php' autocomplete='off' method='POST'>
                                 <label>Montako sisältöpaikkaa haluat?</label>

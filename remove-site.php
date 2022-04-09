@@ -3,6 +3,7 @@
 
     $selectSite = "SELECT id, nimiurl, teemakuva, sisalto_id FROM sivut";
     $result = mysqli_query($conn, $selectSite);
+    $contentImages = array();
     if (mysqli_num_rows($result) > 0) {
         for ($i = 0; $i < mysqli_num_rows($result); $i++) {
             $row = mysqli_fetch_assoc($result);
@@ -17,15 +18,18 @@
                     for ($k = 0; $k < count($IDs); $k++) {
                         if ($IDs[$k] == $contentRow['id']) {
                             $deleteContent .= ",'".$contentRow['id']."'";
+                            array_push($contentImages, $contentRow['kuva']);
                         }
                     }
                 }
-                // POISTA VIELÄ KUVAT SISÄLÖSTÄ
                 $deleteContent .= ")";
                 if (mysqli_query($conn, $deleteSite)
                     && mysqli_query($conn, $deleteContent) 
                     && unlink($row['teemakuva'])
                     && unlink($row['nimiurl'])) {
+                    for ($j = 0; $j < count($contentImages); $j++) {
+                        unlink($contentImages[$j]);
+                    }
                     echo "<script>
                             alert('Sivu poistettu.');
                             window.location.href = 'user-page.php';
@@ -36,5 +40,4 @@
             }
         }
     }
-    // SISÄLTÖKIN PITÄÄ POISTAA JA KUVAT
 ?>

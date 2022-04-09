@@ -18,3 +18,6 @@ function removeSite(currentSite) {
         window.location.href = 'remove-site.php?site=' + currentSite;
     }
 }
+function editSite(currentSite) {
+    window.location.href = 'user-page.php?site=' + currentSite;
+}
