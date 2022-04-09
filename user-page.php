@@ -66,12 +66,15 @@
                 require 'connection.php';
                 $users = "SELECT id, kayttajanimi, rooli, salasana FROM kayttajat";
                 $welcome = "SELECT id, tervehdys, nykyinen FROM tervehdysteksti";
+                $sites = "SELECT nimiurl FROM sivut";
                 $usersResult = mysqli_query($conn, $users);
                 $usersSecondResult = mysqli_query($conn, $users);
                 $welcomeResult = mysqli_query($conn, $welcome);
+                $sitesResult = mysqli_query($conn, $sites);
 
                 $users = array();
                 $welcometexts = array();
+                $sites = array();
                 // We save welcome texts to an array so we can print it later
                 if (mysqli_num_rows($welcomeResult) > 0) {
                     for ($i = 0; $i < mysqli_num_rows($welcomeResult); $i++) {
@@ -86,14 +89,37 @@
                         array_push($users, $row['kayttajanimi']);
                     }
                 }
-
-
+                // We save all sites to an array so we can print it later
+                if (mysqli_num_rows($sitesResult) > 0) {
+                    for ($i = 0; $i < mysqli_num_rows($sitesResult); $i++) {
+                        $row = mysqli_fetch_assoc($sitesResult);
+                        array_push($sites, $row['nimiurl']);
+                    }
+                }
                 echo "<section style='margin-top: 50px;' id='adminPage'>
                         <article>
                             <div class='row'>
                                 <div class=''>
-                                    <h1>Tervetuloa ".$username."</h1>";
-                echo "<h2>Hallitse sivuja</h2>
+                                    <h1>Tervetuloa ".$username."</h1>
+                        <h2>Hallitse sivuja</h2>
+                            <table>
+                                <tr>
+                                    <td style='font-weight: bold'>Sivut</td>
+                                </tr>";
+                for ($i = 0; $i < count($sites); $i++) {
+                    echo "<tr>
+                            <td>
+                                $sites[$i]
+                            </td>
+                            <td>
+                                <a onclick='editSite(\"$sites[$i]\")'>Editoi sivua</a>
+                            </td>
+                            <td>
+                                <a onclick='removeSite(\"$sites[$i]\")'>Poista sivu</a>
+                            </td>
+                        <tr>";
+                }
+                echo   "</table>
                         <h3>Lisää sivu</h3>
                             <form action='user-page.php' autocomplete='off' method='POST'>
                                 <label>Montako sisältöpaikkaa haluat?</label>

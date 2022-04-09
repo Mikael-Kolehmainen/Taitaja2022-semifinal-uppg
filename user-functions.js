@@ -13,3 +13,8 @@ function removeUser(currentUser) {
         window.location.href = 'remove-user.php?username=' + currentUser;
     }
 }
+function removeSite(currentSite) {
+    if (confirm('Oletteko varma että haluatte poistaa sivun') == true) {
+        window.location.href = 'remove-site.php?site=' + currentSite;
+    }
+}

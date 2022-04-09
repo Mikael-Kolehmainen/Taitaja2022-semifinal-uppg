@@ -1,7 +1,8 @@
-#users, #welcometexts {
+#adminPage table {
     border: 1px solid black;
+    margin-left: 20px;
 }
-#users td, #welcometexts td {
+#adminPage td {
     padding: 5px;
 }
 #adminPage a {

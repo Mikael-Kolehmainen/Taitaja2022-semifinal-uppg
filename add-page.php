@@ -51,7 +51,8 @@
                 $subTitle = $_POST["subtitle$i"];
                 $subText = $_POST["subtext$i"];
                 $subImageExt = pathinfo($_FILES["subimage$i"]["name"], PATHINFO_EXTENSION);
-                $subImagePath = "img/unsplash_images/".$sitename_url."_".$_POST["subtitle$i"].".".$subImageExt;
+                $subTitle_url = str_replace(' ', '_', $subTitle);
+                $subImagePath = "img/unsplash_images/".$sitename_url."_".$subTitle_url.".".$subImageExt;
 
                 // Save the image to project folder
                 if (move_uploaded_file($_FILES["subimage$i"]["tmp_name"], $subImagePath)) {
@@ -81,14 +82,15 @@
             // Send general site data to database
             $siteName = $_POST['sitename'];
             $siteTitle = $_POST['sitetitle'];
-            $siteImage = 'img/unsplash_images/'.$_POST['siteimage'];
+            $siteImageExt = pathinfo($_FILES["siteimage"]["name"], PATHINFO_EXTENSION);
+            $siteImagePath = "img/unsplash_images/".$sitename_url."_".$_POST["sitetitle"].".".$siteImageExt;
 
-            // download uploaded image WRITE CODE HERE
-            
-            $page = "INSERT INTO sivut (nimi, nimiurl, otsikko, teemakuva, sisalto_id) 
-                        VALUES ('$siteName', '$myFile', '$siteTitle', 
-                        '$siteImage', '$IDs')";
-            mysqli_query($conn, $page);
+            if (move_uploaded_file($_FILES["siteimage"]["tmp_name"], $siteImagePath)) {
+                $page = "INSERT INTO sivut (nimi, nimiurl, otsikko, teemakuva, sisalto_id) 
+                            VALUES ('$siteName', '$myFile', '$siteTitle', 
+                            '$siteImagePath', '$IDs')";
+                mysqli_query($conn, $page);
+            }
 
             // Write html to html file
             $content = '
