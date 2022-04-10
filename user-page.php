@@ -127,11 +127,47 @@
                             echo "none;";
                         }
                 echo "  '>
-                            <h3>Editoi {$_REQUEST['site']}</h3>
-                            <form action='edit-page.php' autocomplete='off' method='POST'>
-                            
-                            </form>
-                        </div>
+                            <h3>Editoi {$_REQUEST['site']}</h3>";
+                $getSite = "SELECT id, nimi, nimiurl, otsikko, teemakuva, sisalto_id FROM sivut";
+                $resultFromSite = mysqli_query($conn, $getSite);
+                if (mysqli_num_rows($resultFromSite) > 0) {
+                    for ($i = 0; $i < mysqli_num_rows($resultFromSite); $i++) {
+                        $row = mysqli_fetch_assoc($resultFromSite);
+                        if ($_REQUEST['site'] == $row['nimiurl']) {
+                            $IDs = explode(";", $row['sisalto_id']);
+                            echo "  <form action='edit-site.php' autocomplete='off' method='POST'>
+                                        <label for='sitename'>Sivunimi ({$row['nimi']}):</label>
+                                        <input type='text' name='sitename' autocomplete='off'><br>
+                                        <label for='sitetitle'>Sivun otsikko ({$row['otsikko']}):</label>
+                                        <input type='text' name='sitetitle' autocomplete='off'><br>
+                                        <label for='siteimage'>Sivun teemakuva(<img src='{$row['teemakuva']}' class='thumbnail' alt='sivun teemakuva'>):</label>
+                                        <input type='file' accept='image/png, image/jpeg' name='siteimage' autcomplete='off'><br>";
+                                    for ($j = 1; $j < count($IDs); $j++) {
+                                        echo "<h5>Sisältöpaikka $j</h5>";
+                                        $getContent = "SELECT id, alaotsikko, teksti, kuva FROM sisalto";
+                                        $resultFromContent = mysqli_query($conn, $getContent);
+                                        if (mysqli_num_rows($resultFromContent) > 0) {
+                                            for ($k = 0; $k < mysqli_num_rows($resultFromContent); $k++) {
+                                                $rowFromContent = mysqli_fetch_assoc($resultFromContent);
+                                                if ($IDs[$j-1] == $rowFromContent['id']) {
+                                                    echo "
+                                                        <label for='subtitle'>Alaotsikko ({$rowFromContent['alaotsikko']}):</label>
+                                                        <input type='text' name='subtitle$j' autcomplete='off'><br>
+                                                        <label for='subtext'>Teksti ({$rowFromContent['teksti']}):</label>
+                                                        <textarea name='subtext$j' id='welcomeinput' autocomplete='off'></textarea><br>
+                                                        <label for='subimage'>Sisältöpaikan kuva (<img src='{$rowFromContent['kuva']}' class='thumbnail' alt='sisältöpaikan kuva'>):</label>
+                                                        <input type='file' accept='image/png, image/jpeg' name='subimage$j' autocomplete='off'><br>
+                                                        ";
+                                                }
+                                            }
+                                        }
+                                    }
+                            echo "      <input type='submit' value='Editoi sivu' id='changebtn'>
+                                    </form>";
+                        }
+                    }
+                }
+                echo "  </div>
                         <h3>Lisää sivu</h3>
                             <form action='user-page.php' autocomplete='off' method='POST'>
                                 <label>Montako sisältöpaikkaa haluat?</label>

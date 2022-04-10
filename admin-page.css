@@ -45,3 +45,6 @@
 #adminPage #changebtn {
     width: 100px;
 }
+#adminPage .thumbnail {
+    width: 200px;
+}
