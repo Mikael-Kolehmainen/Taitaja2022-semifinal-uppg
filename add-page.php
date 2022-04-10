@@ -83,7 +83,8 @@
             $siteName = $_POST['sitename'];
             $siteTitle = $_POST['sitetitle'];
             $siteImageExt = pathinfo($_FILES["siteimage"]["name"], PATHINFO_EXTENSION);
-            $siteImagePath = "img/unsplash_images/".$sitename_url."_".$_POST["sitetitle"].".".$siteImageExt;
+            $siteTitle_url = str_replace(' ', '_', $siteTitle);
+            $siteImagePath = "img/unsplash_images/".$sitename_url."_".$siteTitle_url.".".$siteImageExt;
 
             if (move_uploaded_file($_FILES["siteimage"]["tmp_name"], $siteImagePath)) {
                 $page = "INSERT INTO sivut (nimi, nimiurl, otsikko, teemakuva, sisalto_id) 
