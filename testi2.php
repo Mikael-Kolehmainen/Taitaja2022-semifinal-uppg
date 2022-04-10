@@ -1,7 +1,7 @@
 
                 <!DOCTYPE html>
                 <?php
-                    $siteName = 'testi';
+                    $siteName = 'testi2';
                     require "connection.php";
                     $sql = "SELECT id, nimi, nimiurl, otsikko, teemakuva, sisalto_id FROM sivut";
                     $getData = mysqli_query($conn, $sql);
