@@ -134,6 +134,8 @@
                     for ($i = 0; $i < mysqli_num_rows($resultFromSite); $i++) {
                         $row = mysqli_fetch_assoc($resultFromSite);
                         if ($_REQUEST['site'] == $row['nimiurl']) {
+                            session_start();
+                            $_SESSION['siteID'] = $row['id'];
                             $IDs = explode(";", $row['sisalto_id']);
                             echo "  <form action='edit-site.php' autocomplete='off' method='POST'>
                                         <label for='sitename'>Sivunimi ({$row['nimi']}):</label>
@@ -163,6 +165,7 @@
                                         }
                                     }
                             echo "      <input type='submit' value='Editoi sivu' id='changebtn'>
+                                        <input type='hidden' name='editPageForm'>
                                     </form>";
                         }
                     }
